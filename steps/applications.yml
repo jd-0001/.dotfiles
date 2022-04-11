@@ -1,0 +1,23 @@
+- shell:
+  -
+    command: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp
+    description: Download chrome
+  -
+    command: dpkg -i google-chrome-stable_current_amd64.deb
+    description: install google chrome
+  -
+    command: wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    description: install nvm
+  -
+    command: nvm install --lts && nvm use --lts
+    description: Install and use LTS version of node
+  -
+    command: npm install --global yarn && echo '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
+    description: Install yarn using npm & setup global path
+  -
+    command: wget https://downloads.slack-edge.com/releases/linux/4.25.0/prod/x64/slack-desktop-4.25.0-amd64.deb -P /tmp
+    description: Download slack
+  -
+    command: read isReady
+    description: Download vscode by visiting https://code.visualstudio.com/download
+  

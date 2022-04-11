@@ -2,9 +2,7 @@
 
 set -e
 
-CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
-
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -12,4 +10,15 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+run_dotbot () {
+  local config
+  config="$1"
+
+  "$BASEDIR/$DOTBOT_DIR/$DOTBOT_BIN" -d "$BASEDIR" -c "$config" $ARGS
+}
+
+run_dotbot 'steps/startup.yml' || true
+run_dotbot 'steps/git.yml' || true
+run_dotbot 'steps/applications.yml' || true
+
+cat post-config-notes.txt

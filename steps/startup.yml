@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- shell:
+  - sudo apt-get update
+  - sudo apt-get upgrade
+  - sudo apt install gnome-tweaks
+  - sudo apt install curl
+  -
+    command: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp
+    description: Download chrome
+  -
+    command: dpkg -i google-chrome-stable_current_amd64.deb
+    description: install google chrome
+  -
+    command: setup
+
+- link:
+
+
