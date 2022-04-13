@@ -5,7 +5,7 @@ set -e
 # ======= Bootstrap =======
 sudo apt-get update && sudo apt-get upgrade -y
 
-sudo apt install git
+sudo apt install git -y
 #git config --global user.name "JD Solanki"
 #git config --global user.email "jdsolanki0001@gmail.com"
 # / ==== Bootstrap
