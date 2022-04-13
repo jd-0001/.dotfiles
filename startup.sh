@@ -19,9 +19,9 @@ sudo snap remove --purge snapd
 echo "Remaining snaps"
 snap list
 echo 'Remove listed snaps using "sudo snap remove --purge <package-name>" in separate tab'
-echo 'Press key when done removing all packages'
+echo 'Press key when done removing all snaps'
 read is_snaps_removed
 sudo rm -rf /var/cache/snapd/
-sudo apt autoremove --purge snapd gnome-software-plugin-snap
+sudo apt autoremove --purge snapd gnome-software-plugin-snap -y
 rm -fr ~/snap
 sudo apt-mark hold snapd

@@ -3,7 +3,7 @@ set -e
 # Chrome
 echo "installing chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp
-dpkg -i /tmp/google-chrome-stable_current_amd64.deb
+sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb
 echo 'Config chrome:'
 echo '1. set chrome download location to "/tmp"'
 echo '2. go to privacy & security > security and choose "enhanced protection"'
