@@ -1,9 +1,0 @@
-Post config notes
-========================
-
-1. Configure chrome
-    a. Set download location to "/tmp"
-    b. go to privacy & security > security and choose enhanced protection
-    c. login github
-2. Configure slack
-    a. set download location to "/tmp"
