@@ -27,6 +27,7 @@ run_dotbot () {
 }
 
 run_dotbot 'steps/startup.yml' || true
+run_dotbot 'steps/snap.yml' || true
 run_dotbot 'steps/applications.yml' || true
 
 cat post-config-notes.txt

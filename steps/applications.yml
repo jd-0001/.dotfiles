@@ -22,6 +22,8 @@
     command: wget https://downloads.slack-edge.com/releases/linux/4.25.0/prod/x64/slack-desktop-4.25.0-amd64.deb -P /tmp
     description: Download slack
   -
-    command: read isReady
+    command: read download_vscode_n_configure
     description: Download vscode by visiting https://code.visualstudio.com/download
-  
+  -
+    command: sudo apt install dconf-editor
+    description: install dconfig editor

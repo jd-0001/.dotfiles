@@ -1,0 +1,10 @@
+- shell:
+  - command: echo "Removing snaps..."
+  - command: echo "Snaps on system"
+  - command: echo 'Remove listed snaps using "sudo snap remove --purge <package-name>"'
+  - command: echo 'Press key when done removing all packages'
+  - command: read is_done
+  - command: sudo rm -rf /var/cache/snapd/
+  - command: sudo apt autoremove --purge snapd gnome-software-plugin-snap
+  - command: rm -fr ~/snap
+  - command: sudo apt-mark hold snapd
