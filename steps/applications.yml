@@ -5,6 +5,10 @@
   -
     command: dpkg -i google-chrome-stable_current_amd64.deb
     description: install google chrome
+  - echo 'Config chrome:\n1. set chrome download location to "/tmp"\n2. go to privacy & security > security and choose "enhanced protection"\n3. Login github'
+  -
+    command: read post_chrome_install
+    description: Wait for user to finish chrome config
   -
     command: wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     description: install nvm

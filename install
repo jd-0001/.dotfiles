@@ -2,6 +2,15 @@
 
 set -e
 
+# ======= Bootstrap =======
+sudo apt-get update
+sudo apt-get upgrade -y
+
+sudo apt install git
+#git config --global user.name "JD Solanki"
+#git config --global user.email "jdsolanki0001@gmail.com"
+# / ==== Bootstrap
+
 DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -18,7 +27,6 @@ run_dotbot () {
 }
 
 run_dotbot 'steps/startup.yml' || true
-run_dotbot 'steps/git.yml' || true
 run_dotbot 'steps/applications.yml' || true
 
 cat post-config-notes.txt
