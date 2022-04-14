@@ -4,7 +4,7 @@ source "$(dirname "$0")/../utils/vars.sh"
 infoh1 "Gnome Tweaks"
 
 pinfo "Installing gnome tweaks..."
-sudo apt install gnome-tweaks
+sudo apt install gnome-tweaks >> "$LOG_DIR.dotfiles.log"
 psuccess "gnome-tweaks installed successfully"
 
 pinfo "Let's configure gnome-tweaks:"
