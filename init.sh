@@ -3,12 +3,6 @@ set -e
 source "$(dirname "$0")/utils/functions.sh"
 source "$(dirname "$0")/utils/vars.sh"
 
-infoh1 "cURL"
-
-pblue "Installing cURL"
-sudo apt install curl >> "$LOG_DIR.dotfiles.log"
-pgreen "cURL installed\n"
-
 # Snaps
 infoh1 "Snaps"
 echo "Let's remove snaps now :)"
@@ -64,6 +58,7 @@ sudo apt-mark hold snapd >> "$LOG_DIR.dotfiles.log"
 pgreen "Snaps cleaned from the system\n"
 
 # Install applications in order
+/bin/bash "$(dirname "$0")/installers/curl.sh"
 /bin/bash "$(dirname "$0")/installers/chrome.sh"
 /bin/bash "$(dirname "$0")/installers/slack.sh"
 /bin/bash "$(dirname "$0")/installers/gnome-tweaks.sh"
