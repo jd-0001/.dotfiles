@@ -25,3 +25,12 @@ sudo rm -rf /var/cache/snapd/
 sudo apt autoremove --purge snapd gnome-software-plugin-snap -y
 rm -fr ~/snap
 sudo apt-mark hold snapd
+
+# Install applications in order
+/bin/bash "$(dirname "$0")/chrome.sh"
+/bin/bash "$(dirname "$0")/slack.sh"
+/bin/bash "$(dirname "$0")/gnome-tweaks.sh"
+/bin/bash "$(dirname "$0")/nvm.sh"
+/bin/bash "$(dirname "$0")/yarn.sh"
+/bin/bash "$(dirname "$0")/vscode.sh"
+/bin/bash "$(dirname "$0")/dconf.sh"
