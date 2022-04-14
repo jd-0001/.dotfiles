@@ -5,9 +5,9 @@ source "$(dirname "$0")/utils/vars.sh"
 
 infoh1 "cURL"
 
-pinfo "Installing cURL"
+pblue "Installing cURL"
 sudo apt install curl
-psuccess "cURL installed"
+pgreen "cURL installed"
 
 # Snaps
 infoh1 "Snaps"
@@ -15,53 +15,53 @@ echo "Let's remove snaps now :)"
 echo -e "Below is list of snaps:\n"
 snap list
 echo -e "\n"
-pinfo "Removing possible snaps..."
+pblue "Removing possible snaps..."
 
-pinfo "Removing firefox"
+pblue "Removing firefox"
 sudo snap remove --purge firefox
-psuccess "firefox removed"
+pgreen "firefox removed"
 
-pinfo "Removing gnome-3-38-2004"
+pblue "Removing gnome-3-38-2004"
 sudo snap remove --purge gnome-3-38-2004
-psuccess "gnome-3-38-2004 removed"
+pgreen "gnome-3-38-2004 removed"
 
-pinfo "Removing snapd-desktop-integration"
+pblue "Removing snapd-desktop-integration"
 sudo snap remove --purge snapd-desktop-integration
-psuccess "snapd-desktop-integration removed"
+pgreen "snapd-desktop-integration removed"
 
-pinfo "Removing snap-store"
+pblue "Removing snap-store"
 sudo snap remove --purge snap-store
-psuccess "snap-store removed"
+pgreen "snap-store removed"
 
-pinfo "Removing gtk-common-themes"
+pblue "Removing gtk-common-themes"
 sudo snap remove --purge gtk-common-themes
-psuccess "gtk-common-themes removed"
+pgreen "gtk-common-themes removed"
 
-pinfo "Removing bare"
+pblue "Removing bare"
 sudo snap remove --purge bare
-psuccess "bare removed"
+pgreen "bare removed"
 
-pinfo "Removing core20"
+pblue "Removing core20"
 sudo snap remove --purge core20
-psuccess "core20 removed"
+pgreen "core20 removed"
 
-pinfo "Removing snapd"
+pblue "Removing snapd"
 sudo snap remove --purge snapd
-psuccess "snapd removed"
+pgreen "snapd removed"
 
-pinfo "Remaining snaps:"
+pblue "Remaining snaps:"
 snap list
 echo -e "\n"
-pinfo 'Remove listed snaps using "sudo snap remove --purge <package-name>" in separate tab'
+pblue 'Remove listed snaps using "sudo snap remove --purge <package-name>" in separate tab'
 echo 'Press key when done removing all snaps'
 read wait_for_keypress
 
-pinfo "Removing snap related stuff..."
+pblue "Removing snap related stuff..."
 sudo rm -rf /var/cache/snapd/
 sudo apt autoremove --purge snapd gnome-software-plugin-snap -y
 rm -fr ~/snap
 sudo apt-mark hold snapd
-psuccess "Snaps cleaned from the system"
+pgreen "Snaps cleaned from the system"
 
 # Install applications in order
 /bin/bash "$(dirname "$0")/installers/chrome.sh"

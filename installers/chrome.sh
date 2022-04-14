@@ -4,14 +4,14 @@ source "$(dirname "$0")/../utils/vars.sh"
 infoh1 "Installing chrome"
 
 # Download chrome
-pinfo "Downloading chrome..."
+pblue "Downloading chrome..."
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp >> "$LOG_DIR.dotfiles.log"
-psuccess "Chrome downloaded"
+pgreen "Chrome downloaded"
 
 # Install chrome
-pinfo "Installing chrome now..."
+pblue "Installing chrome now..."
 sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb >> "$LOG_DIR/chrome-installer.log" >> "$LOG_DIR.dotfiles.log"
-psuccess "Chrome installed"
+pgreen "Chrome installed"
 
 # Manual configuration
 infoh2 "Configure chrome:"

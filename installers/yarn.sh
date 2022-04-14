@@ -3,9 +3,9 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "yarn"
 
-pinfo "Installing yarn..."
+pblue "Installing yarn..."
 npm install --global yarn  >> "$LOG_DIR.dotfiles.log"
 
-pinfo "Adding yarn global bin path to `~/.profile`"
+pblue "Adding yarn global bin path to `~/.profile`"
 echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
-psuccess "Path added"
+pgreen "Path added"

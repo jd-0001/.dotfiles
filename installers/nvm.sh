@@ -3,8 +3,8 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "nvm"
 
-pinfo "Downloading nvm..."
+pblue "Downloading nvm..."
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash >> "$LOG_DIR.dotfiles.log"
 
-pinfo "Insallin Node LTS version & setting it as default version"
+pblue "Insallin Node LTS version & setting it as default version"
 nvm install --lts && nvm use --lts >> "$LOG_DIR.dotfiles.log"
