@@ -6,8 +6,8 @@ source "$(dirname "$0")/utils/vars.sh"
 infoh1 "cURL"
 
 pblue "Installing cURL"
-sudo apt install curl
-pgreen "cURL installed"
+sudo apt install curl >> "$LOG_DIR.dotfiles.log"
+pgreen "cURL installed\n"
 
 # Snaps
 infoh1 "Snaps"
@@ -18,36 +18,36 @@ echo -e "\n"
 pblue "Removing possible snaps..."
 
 pblue "Removing firefox"
-sudo snap remove --purge firefox
-pgreen "firefox removed"
+sudo snap remove --purge firefox >> "$LOG_DIR.dotfiles.log"
+pgreen "firefox removed\n"
 
 pblue "Removing gnome-3-38-2004"
-sudo snap remove --purge gnome-3-38-2004
-pgreen "gnome-3-38-2004 removed"
+sudo snap remove --purge gnome-3-38-2004 >> "$LOG_DIR.dotfiles.log"
+pgreen "gnome-3-38-2004 removed\n"
 
 pblue "Removing snapd-desktop-integration"
-sudo snap remove --purge snapd-desktop-integration
-pgreen "snapd-desktop-integration removed"
+sudo snap remove --purge snapd-desktop-integration >> "$LOG_DIR.dotfiles.log"
+pgreen "snapd-desktop-integration removed\n"
 
 pblue "Removing snap-store"
-sudo snap remove --purge snap-store
-pgreen "snap-store removed"
+sudo snap remove --purge snap-store >> "$LOG_DIR.dotfiles.log"
+pgreen "snap-store removed\n"
 
 pblue "Removing gtk-common-themes"
-sudo snap remove --purge gtk-common-themes
-pgreen "gtk-common-themes removed"
+sudo snap remove --purge gtk-common-themes >> "$LOG_DIR.dotfiles.log"
+pgreen "gtk-common-themes removed\n"
 
 pblue "Removing bare"
-sudo snap remove --purge bare
-pgreen "bare removed"
+sudo snap remove --purge bare >> "$LOG_DIR.dotfiles.log"
+pgreen "bare removed\n"
 
 pblue "Removing core20"
-sudo snap remove --purge core20
-pgreen "core20 removed"
+sudo snap remove --purge core20 >> "$LOG_DIR.dotfiles.log"
+pgreen "core20 removed\n"
 
 pblue "Removing snapd"
-sudo snap remove --purge snapd
-pgreen "snapd removed"
+sudo snap remove --purge snapd >> "$LOG_DIR.dotfiles.log"
+pgreen "snapd removed\n"
 
 pblue "Remaining snaps:"
 snap list
@@ -57,11 +57,11 @@ echo 'Press key when done removing all snaps'
 read wait_for_keypress
 
 pblue "Removing snap related stuff..."
-sudo rm -rf /var/cache/snapd/
-sudo apt autoremove --purge snapd gnome-software-plugin-snap -y
+sudo rm -rf /var/cache/snapd/ >> "$LOG_DIR.dotfiles.log"
+sudo apt autoremove --purge snapd gnome-software-plugin-snap -y >> "$LOG_DIR.dotfiles.log"
 rm -fr ~/snap
-sudo apt-mark hold snapd
-pgreen "Snaps cleaned from the system"
+sudo apt-mark hold snapd >> "$LOG_DIR.dotfiles.log"
+pgreen "Snaps cleaned from the system\n"
 
 # Install applications in order
 /bin/bash "$(dirname "$0")/installers/chrome.sh"

@@ -6,12 +6,12 @@ infoh1 "Installing chrome"
 # Download chrome
 pblue "Downloading chrome..."
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -P /tmp >> "$LOG_DIR.dotfiles.log"
-pgreen "Chrome downloaded"
+pgreen "Chrome downloaded\n"
 
 # Install chrome
 pblue "Installing chrome now..."
 sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb >> "$LOG_DIR/chrome-installer.log" >> "$LOG_DIR.dotfiles.log"
-pgreen "Chrome installed"
+pgreen "Chrome installed\n"
 
 # Manual configuration
 infoh2 "Configure chrome:"
@@ -21,3 +21,5 @@ echo '3. Login Google'
 echo '4. Login GitHub'
 
 wait_for_keypress
+
+echo -e "\n\n"
