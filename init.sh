@@ -66,3 +66,8 @@ pgreen "Snaps cleaned from the system\n"
 /bin/bash "$(dirname "$0")/installers/yarn.sh"
 /bin/bash "$(dirname "$0")/installers/vscode.sh"
 /bin/bash "$(dirname "$0")/installers/dconf.sh"
+/bin/bash "$(dirname "$0")/installers/xclip.sh"
+/bin/bash "$(dirname "$0")/installers/poetry.sh"
+/bin/bash "$(dirname "$0")/installers/pyenv.sh"
+
+# Download files

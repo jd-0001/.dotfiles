@@ -1,0 +1,7 @@
+[user]
+	name = JD Solanki
+	email = jdsolanki0001@gmail.com
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
