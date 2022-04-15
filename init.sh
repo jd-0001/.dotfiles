@@ -59,7 +59,7 @@ pgreen "Snaps cleaned from the system\n"
 
 # Install applications in order
 /bin/bash "$(dirname "$0")/installers/curl.sh"
-/bin/bash "$(dirname "$0")/installers/chrome.sh"
+#/bin/bash "$(dirname "$0")/installers/chrome.sh"
 /bin/bash "$(dirname "$0")/installers/slack.sh"
 /bin/bash "$(dirname "$0")/installers/gnome-tweaks.sh"
 /bin/bash "$(dirname "$0")/installers/nvm.sh"
