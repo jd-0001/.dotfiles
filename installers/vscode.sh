@@ -12,7 +12,7 @@ sudo dpkg -i /tmp/code*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "vscode installed"
 
 pblue "Opening vscode"
-code &
+code >> "$LOG_DIR.dotfiles.log" 2>&1 &
 
 echo "sign in using github and sync settings"
 wait_for_keypress

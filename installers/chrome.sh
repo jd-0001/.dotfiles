@@ -14,7 +14,7 @@ sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb >> "$LOG_DIR.dotfiles.l
 pgreen "Chrome installed\n"
 
 pblue "Opening google chrome"
-google-chrome &
+google-chrome >> "$LOG_DIR.dotfiles.log" 2>&1 &
 
 # Manual configuration
 infoh2 "Configure chrome:"

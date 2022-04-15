@@ -16,4 +16,10 @@ pblue "Insallin Node LTS version & setting it as default version"
 nvm install --lts && nvm use --lts >> "$LOG_DIR.dotfiles.log"
 pgreen "nvm installation and setup completed"
 
+pinfo "trying running node"
+node --version
+
+pinfo "trying running npm"
+npm --version
+
 echo -e "\n\n"
