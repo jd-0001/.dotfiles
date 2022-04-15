@@ -13,6 +13,9 @@ pblue "Installing chrome now..."
 sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "Chrome installed\n"
 
+pblue "Opening google chrome"
+google-chrome &
+
 # Manual configuration
 infoh2 "Configure chrome:"
 echo '1. Set chrome download location to "/tmp"'
