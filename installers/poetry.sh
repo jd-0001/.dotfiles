@@ -12,10 +12,11 @@ curl -sSL https://install.python-poetry.org | python3 - >> "$LOG_DIR.dotfiles.lo
 
 ##############
 
-var="$(poetry --version)" 
+poetry_version_output="$(poetry --version)" 
 
-if [[ $var =~ "^Command " ]]; then
+if [[ $poetry_version_output =~ "^Command " ]]; then
     #  poetry not found add it to path
+    echo "Adding path..."
     echo -e '\n\n#Poetry\nexport PATH="$HOME/.local/bin:$PATH"' >> ~/.profile
 else
     echo "Poetry found!"
