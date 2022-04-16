@@ -3,12 +3,10 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "yarn"
 
-# source bashrc & profile for running npm command
+# source bashrc
 source ~/.bashrc
-source ~/.profile
 
 pblue "Installing yarn..."
-source ~/.bashrc
 npm --version
 npm install --global yarn  >> "$LOG_DIR.dotfiles.log"
 pgreen "Yarn installed\n"

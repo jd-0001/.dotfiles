@@ -58,15 +58,15 @@ source "$(dirname "$0")/utils/vars.sh"
 # pgreen "Snaps cleaned from the system\n"
 
 # # Install applications in order
-# /bin/bash "$(dirname "$0")/installers/curl.sh"
+/bin/bash "$(dirname "$0")/installers/curl.sh"
 # /bin/bash "$(dirname "$0")/installers/chrome.sh"
 # /bin/bash "$(dirname "$0")/installers/slack.sh"
 #/bin/bash "$(dirname "$0")/installers/gnome-tweaks.sh"
 /bin/bash "$(dirname "$0")/installers/nvm.sh"
 /bin/bash "$(dirname "$0")/installers/yarn.sh"
 #/bin/bash "$(dirname "$0")/installers/vscode.sh"
-/bin/bash "$(dirname "$0")/installers/dconf.sh"
-/bin/bash "$(dirname "$0")/installers/xclip.sh"
+#/bin/bash "$(dirname "$0")/installers/dconf.sh"
+#/bin/bash "$(dirname "$0")/installers/xclip.sh"
 /bin/bash "$(dirname "$0")/installers/poetry.sh"
 /bin/bash "$(dirname "$0")/installers/pyenv.sh"
 
