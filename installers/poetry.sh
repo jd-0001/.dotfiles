@@ -10,28 +10,17 @@ sudo apt install $(python3 --version | grep -oP "\w+\s\d\.\d+" | sed 's/ //')-ve
 pblue "Installing poetry..."
 curl -sSL https://install.python-poetry.org | python3 - >> "$LOG_DIR.dotfiles.log"
 
-##############
+pblue "Adding ~/.local/bin to PATH"
+echo -e '\n\n#Poetry\nexport PATH="$HOME/.local/bin:$PATH"' >> ~/.profile
 
-poetry_version_output="$(poetry --version)" 
+echo -e "$poetry_version_output"
 
-if [[ $poetry_version_output =~ "^Command " ]]; then
-    #  poetry not found add it to path
-    echo "Adding path..."
-    echo -e '\n\n#Poetry\nexport PATH="$HOME/.local/bin:$PATH"' >> ~/.profile
-else
-    echo "Poetry found!"
-fi
+ pblue "Checking poetry"
+ poetry --version
 
-##############
+ echo "Once poetry is installed and found please any key"
 
-# pblue "Checking poetry"
-# poetry --version
-
-# echo -e "If poetry can't be found, add poetry to your PATH and run 'poetry --version' to check if it's working."
-# echo "Poetry path: $HOME/.local/bin"
-# echo "Once poetry is installed and found please any key"
-
-# wait_for_keypress
+ wait_for_keypress
 
 pblue "Configuring poetry to create virtual environment in project directory"
 poetry config virtualenvs.in-project true
