@@ -5,7 +5,7 @@ infoh1 "Poetry"
 
 pblue "installing venv"
 # python --version | grep -oP "\w+\s\d\.\d+" | sed 's/ //' => python3.10 (two digit version)
-sudo apt install $(python3 --version | grep -oP "\w+\s\d\.\d+" | sed 's/ //') -y >> "$LOG_DIR.dotfiles.log"
+sudo apt install $(python3 --version | grep -oP "\w+\s\d\.\d+" | sed 's/ //')-venv -y >> "$LOG_DIR.dotfiles.log"
 
 pblue "Installing poetry..."
 curl -sSL https://install.python-poetry.org | python3 - >> "$LOG_DIR.dotfiles.log"
