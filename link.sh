@@ -1,5 +1,5 @@
-source "$(dirname "$0")/functions.sh"
-source "$(dirname "$0")/vars.sh"
+source "$(dirname "$0")/utils/functions.sh"
+source "$(dirname "$0")/utils/vars.sh"
 
 # You can also use relative path
 LINKS_DIR="$(dirname "$0")/links/"
