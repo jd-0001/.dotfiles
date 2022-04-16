@@ -15,7 +15,7 @@ echo ""
 
 pblue "Opening gnome-tweaks in 3 seconds..."
 sleep 3
-gnome-tweaks
+gnome-tweaks > /dev/null 2>&1 &
 
 wait_for_keypress
 

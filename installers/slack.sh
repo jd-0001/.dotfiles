@@ -11,7 +11,8 @@ pblue "Installing slack..."
 sudo dpkg -i /tmp/slack*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "Slack installed"
 
-pblue "Opening slack"
+pblue "Opening slack in 3 seconds..."
+sleep 3
 slack > /dev/null 2>&1 &
 
 echo "Login slack and press any key"

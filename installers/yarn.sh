@@ -7,6 +7,7 @@ infoh1 "yarn"
 source ~/.bashrc
 
 pblue "Installing yarn..."
+source ~/.bashrc
 npm --version
 npm install --global yarn  >> "$LOG_DIR.dotfiles.log"
 pgreen "Yarn installed\n"
