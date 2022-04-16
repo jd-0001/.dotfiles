@@ -11,10 +11,12 @@ pblue "Installing vscode..."
 sudo dpkg -i /tmp/code*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "vscode installed"
 
-pblue "Opening vscode"
+echo "sign in using github and sync settings"
+
+pblue "Opening vscode in 3 seconds..."
+sleep 3
 code > /dev/null 2>&1 &
 
-echo "sign in using github and sync settings"
 wait_for_keypress
 
 echo -e "\n\n"
