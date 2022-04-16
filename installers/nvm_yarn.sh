@@ -17,3 +17,19 @@ nvm install --lts && nvm use --lts >> "$LOG_DIR.dotfiles.log"
 pgreen "nvm installation and setup completed"
 
 echo -e "\n\n"
+
+infoh1 "yarn"
+
+# source bashrc
+source ~/.bashrc
+
+pblue "Installing yarn..."
+npm --version
+npm install --global yarn  >> "$LOG_DIR.dotfiles.log"
+pgreen "Yarn installed\n"
+
+pblue "Adding yarn global bin path to `~/.profile`"
+echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
+pgreen "Path added"
+
+echo -e "\n\n"
