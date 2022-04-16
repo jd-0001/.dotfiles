@@ -12,6 +12,7 @@ curl -sSL https://install.python-poetry.org | python3 - >> "$LOG_DIR.dotfiles.lo
 
 pblue "Adding ~/.local/bin to PATH"
 echo -e '\n\n#Poetry\nexport PATH="$HOME/.local/bin:$PATH"' >> ~/.profile
+source ~/.bashrc
 
 echo -e "$poetry_version_output"
 
