@@ -11,6 +11,12 @@ pblue "Let's configure gnome-tweaks:"
 echo "1. Add slack to startup application"
 echo '2. windows → window focus → "focus on hover" & check "raise windows when focused"'
 echo '3. Top Bar → Clock → weekday = true'
+echo ""
+
+pblue "Opening gnome-tweaks in 3 seconds..."
+sleep 3
+gnome-tweaks
+
 wait_for_keypress
 
 echo -e "\n\n"

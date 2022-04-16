@@ -36,7 +36,7 @@ alias penva='source $(poetry env info -p)/bin/activate'
 alias 'glog'="git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
 alias untar='tar -zxvf '
 alias gen-pass="openssl rand -base64 20"
-alias ex-ip='curl ipinfo.io/ip'
+alias ex-ip='curl ipblue.io/ip'
 alias ip='hostname -I'
 alias nx-syntax='sudo nginx -t'
 alias nx-re='sudo systemctl restart nginx'
