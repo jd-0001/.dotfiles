@@ -23,27 +23,27 @@ infoh1 "xonsh extensions"
 
 # https://github.com/oh-my-xonsh/xontrib-up
 pblue "Installing up"
-xpip install xontrib-up
+/bin/xonsh -c xpip install xontrib-up
 echo "xontrib load up" >> ~/.xonshrc
 echo -e "\n"
 
 # https://github.com/jnoortheen/xontrib-cmd-durations
 pblue "Installing cmd_done"
-xpip install xontrib-cmd-durations
+/bin/xonsh -c xpip install xontrib-cmd-durations
 echo "xontrib load cmd_done" >> ~/.xonshrc
 echo -e "\n"
 
 # https://github.com/oh-my-xonsh/xontrib-default-command
 pblue "default command"
-xpip install xonsh-default-command
+/bin/xonsh -c xpip install xonsh-default-command
 echo "xontrib load default-command" >> ~/.xonshrc
 
 # https://github.com/cafehaine/xontrib-xlsd
 pblue "xlsd"
-xpip install xontrib-xlsd
+/bin/xonsh -c xpip install xontrib-xlsd
 echo "xontrib load xlsd" >> ~/.xonshrc
 
 # https://github.com/dyuri/xontrib-langenv
 pblue "xontrib-langenv - pyenv"
-xpip install xontrib-langenv
+/bin/xonsh -c xpip install xontrib-langenv
 echo "xontrib load pyenv" >> ~/.xonshrc
