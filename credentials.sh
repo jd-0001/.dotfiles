@@ -16,7 +16,7 @@ unzip /tmp/dotfiles*.zip -d /tmp
 HOME_files="$dotfiles_cred_dir/\$HOME"
 pblue "Copying files from $HOME_files"
 if [[ -d $HOME_files ]]; then
-    cp -r $HOME_files/* ~
+    cp -r $HOME_files/. ~
 else
     echo -e "Directory doesn't exist: $HOME_files"
 fi
