@@ -75,3 +75,6 @@ pgreen "Snaps cleaned from the system\n"
 
 # credentails
 /bin/bash "$(dirname "$0")/credentails.sh"
+
+# configure gnome
+/bin/bash "$(dirname "$0")/distro/ubuntu.sh"
