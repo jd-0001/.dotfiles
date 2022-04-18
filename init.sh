@@ -74,7 +74,7 @@ pgreen "Snaps cleaned from the system\n"
 /bin/bash "$(dirname "$0")/link.sh"
 
 # credentails
-/bin/bash "$(dirname "$0")/credentails.sh"
+#/bin/bash "$(dirname "$0")/credentails.sh"
 
 # configure gnome
 /bin/bash "$(dirname "$0")/distro/ubuntu.sh"
