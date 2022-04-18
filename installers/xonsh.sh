@@ -53,3 +53,6 @@ echo "xontrib load xlsd" >> ~/.xonshrc
 pblue "xontrib-langenv - pyenv"
 /usr/bin/xonsh -c "xpip install xontrib-langenv" >> "$LOG_DIR.dotfiles.log"
 echo "xontrib load pyenv" >> ~/.xonshrc
+
+pblue "You need to login and logout to use xonsh as default shell"
+psuccess "xonsh setup completed"
