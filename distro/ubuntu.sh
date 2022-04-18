@@ -1,3 +1,6 @@
+source "$(dirname "$0")/../utils/functions.sh"
+source "$(dirname "$0")/../utils/vars.sh"
+
 mkdir -p ~/Projects/clevision
 mkdir -p ~/.config/gtk-3.0
 

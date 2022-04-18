@@ -21,12 +21,6 @@ chsh -s $(which xonsh)
 
 infoh1 "xonsh extensions"
 
-pblue "Running xonsh"
-xonsh
-
-pblue "trying..."
-ll
-
 # https://github.com/oh-my-xonsh/xontrib-up
 pblue "Installing up"
 /usr/bin/xonsh -c "xpip install xontrib-up" >> "$LOG_DIR.dotfiles.log"
@@ -55,4 +49,4 @@ pblue "xontrib-langenv - pyenv"
 echo "xontrib load pyenv" >> ~/.xonshrc
 
 pblue "You need to login and logout to use xonsh as default shell"
-psuccess "xonsh setup completed"
+pgreen "xonsh setup completed"
