@@ -29,27 +29,27 @@ ll
 
 # https://github.com/oh-my-xonsh/xontrib-up
 pblue "Installing up"
-/usr/bin/xonsh -c "xpip install xontrib-up"
+/usr/bin/xonsh -c "xpip install xontrib-up" >> "$LOG_DIR.dotfiles.log"
 echo "xontrib load up" >> ~/.xonshrc
 echo -e "\n"
 
 # https://github.com/jnoortheen/xontrib-cmd-durations
 pblue "Installing cmd_done"
-/usr/bin/xonsh -c "xpip install xontrib-cmd-durations"
+/usr/bin/xonsh -c "xpip install xontrib-cmd-durations" >> "$LOG_DIR.dotfiles.log"
 echo "xontrib load cmd_done" >> ~/.xonshrc
 echo -e "\n"
 
 # https://github.com/oh-my-xonsh/xontrib-default-command
 pblue "default command"
-/usr/bin/xonsh -c "xpip install xonsh-default-command"
+/usr/bin/xonsh -c "xpip install xontrib-default-command" >> "$LOG_DIR.dotfiles.log"
 echo "xontrib load default-command" >> ~/.xonshrc
 
 # https://github.com/cafehaine/xontrib-xlsd
 pblue "xlsd"
-/usr/bin/xonsh -c "xpip install xontrib-xlsd"
+/usr/bin/xonsh -c "xpip install xontrib-xlsd" >> "$LOG_DIR.dotfiles.log"
 echo "xontrib load xlsd" >> ~/.xonshrc
 
 # https://github.com/dyuri/xontrib-langenv
 pblue "xontrib-langenv - pyenv"
-/usr/bin/xonsh -c "xpip install xontrib-langenv"
+/usr/bin/xonsh -c "xpip install xontrib-langenv" >> "$LOG_DIR.dotfiles.log"
 echo "xontrib load pyenv" >> ~/.xonshrc
