@@ -1,0 +1,40 @@
+{
+    "template": {
+        "scope": "vue",
+        "prefix": "template",
+        "body": [
+            "<template>",
+            "  $1",
+            "</template>"
+        ],
+        "description": "Create <template> block"
+    },
+    "script": {
+        "prefix": "vue-sfc-ts",
+        "body": [
+            "<script lang=\"ts\" setup>",
+            "",
+            "</script>",
+            "",
+            "<template>",
+            "  ",
+            "</template>",
+            "",
+            "<style lang=\"scss\">",
+            "",
+            "</style>",
+            ""
+        ],
+        "description": "Vue SFC Typescript"
+    },
+    "style": {
+        "scope": "vue",
+        "prefix": "style",
+        "body": [
+            "<style lang=\"scss\">",
+            "$1",
+            "</style>"
+        ],
+        "description": "Create <style> block"
+    },
+}

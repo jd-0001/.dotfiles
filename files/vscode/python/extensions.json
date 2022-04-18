@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "ms-python.vscode-pylance",
+    "almenon.arepl",
+    "exodiusstudios.comment-anchors",
+    "atishay-jain.all-autocomplete",
+    "wmaurer.change-case",
+    "editorconfig.editorconfig",
+    "usernamehw.errorlens",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "visualstudioexptteam.vscodeintellicode",
+    "ionutvmi.path-autocomplete",
+    "njpwerner.autodocstring",
+    "wmaurer.change-case",
+    "streetsidesoftware.code-spell-checker",
+    "GitHub.copilot",
+    "njpwerner.autodocstring"
+  ]
+}
