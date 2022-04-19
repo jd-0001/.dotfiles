@@ -3,8 +3,9 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "vue-cli"
 
-pblue "sourcing ~/.profile for accessing yarn command"
+pblue "sourcing ~/.profile & ~/.profile for accessing yarn command"
 source ~/.profile
+source ~/.bashrc
 
 pblue "Installing vue-cli..."
 yarn global add @vue/cli >> "$LOG_DIR.dotfiles.log"
