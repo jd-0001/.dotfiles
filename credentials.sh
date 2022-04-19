@@ -10,7 +10,7 @@ pblue "Now, we need zip \"dotfiles*.zip\" in /tmp dir and all files that should 
 pblue "Download your .dotfiles zip that contains your credentials files and make sure it's in /tmp dir"
 wait_for_keypress
 
-pblue "Unzipping files..."
+pblue "Unzipping files..." >> "$LOG_DIR.dotfiles.log"
 unzip /tmp/dotfiles*.zip -d /tmp
 
 HOME_files="$dotfiles_cred_dir/\$HOME"
@@ -20,3 +20,6 @@ if [[ -d $HOME_files ]]; then
 else
     echo -e "Directory doesn't exist: $HOME_files"
 fi
+
+pblue "Credentials setup complete"
+echo -e "\n\n"

@@ -81,3 +81,7 @@ source "$(dirname "$0")/utils/vars.sh"
 
 # Rachana
 /bin/bash "$(dirname "$0")/rachana.sh"
+
+echo -e "\n"
+
+pgreen "You are ready to rock!"
