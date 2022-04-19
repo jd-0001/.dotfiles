@@ -9,6 +9,10 @@ pgreen "Clone successful"
 
 pblue "installing rachana packages using poetry..."
 cd ~/Rachana
+
+source ~/.bashrc
+source ~/.profile
+
 poetry install
 
 pblue "Adding rachana scripts to PATH"
