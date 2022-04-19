@@ -11,3 +11,5 @@ sudo ln -s $(realpath $LINKS_DIR)/.gitconfig ~
 sudo ln -s $(realpath $LINKS_DIR)/.vimrc ~
 
 pgreen "Symlinks done"
+
+echo -e "\n\n"
