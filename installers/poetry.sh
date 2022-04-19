@@ -20,7 +20,7 @@ echo -e "$poetry_version_output"
  pblue "Checking poetry"
  poetry --version
 
- echo "Once poetry is installed and found please any key"
+ echo "Once poetry is installed and found press any key"
 
  wait_for_keypress
 

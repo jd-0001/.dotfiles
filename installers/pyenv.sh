@@ -6,7 +6,7 @@ infoh1 "pyenv"
 pblue "pyenv"
 
 # Clone the pyenv repo
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv > /dev/null 2>&1
 
 # Add path in ~/.profile
 sed -Ei -e '/^([^#]|$)/ {a \
