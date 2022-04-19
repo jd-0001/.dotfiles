@@ -62,7 +62,7 @@ source "$(dirname "$0")/utils/vars.sh"
 # /bin/bash "$(dirname "$0")/installers/chrome.sh"
 # /bin/bash "$(dirname "$0")/installers/slack.sh"
 # /bin/bash "$(dirname "$0")/installers/gnome-tweaks.sh"
-/bin/bash "$(dirname "$0")/installers/node_eco.sh"
+#/bin/bash "$(dirname "$0")/installers/node_eco.sh"
 # /bin/bash "$(dirname "$0")/installers/vscode.sh"
 # /bin/bash "$(dirname "$0")/installers/dconf.sh"
 # /bin/bash "$(dirname "$0")/installers/xclip.sh"
@@ -74,7 +74,7 @@ source "$(dirname "$0")/utils/vars.sh"
 /bin/bash "$(dirname "$0")/link.sh"
 
 # credentails
-/bin/bash "$(dirname "$0")/credentails.sh"
+/bin/bash "$(dirname "$0")/credentials.sh"
 
 # configure gnome
 /bin/bash "$(dirname "$0")/distro/ubuntu.sh"
