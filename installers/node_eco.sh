@@ -4,7 +4,7 @@ source "$(dirname "$0")/../utils/vars.sh"
 infoh1 "nvm"
 
 pblue "Downloading nvm..."
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash >> "$LOG_DIR.dotfiles.log"
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash > /dev/null 2>&1
 
 pblue "Setting up nvm for this script to run further commands which depends on it"
 export NVM_DIR="$HOME/.nvm"
@@ -13,7 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 pgreen "nvm setup complete\n"
 
 pblue "Insallin Node LTS version & setting it as default version"
-nvm install --lts && nvm use --lts >> "$LOG_DIR.dotfiles.log"
+nvm install --lts && nvm use --lts > /dev/null 2>&1
 pgreen "nvm installation and setup completed"
 
 echo -e "\n\n"
@@ -24,7 +24,7 @@ infoh1 "yarn"
 source ~/.bashrc
 
 pblue "Installing yarn..."
-npm install --global yarn >> "$LOG_DIR.dotfiles.log"
+npm install --global yarn > /dev/null 2>&1
 pgreen "Yarn installed\n"
 
 pblue "Adding yarn global bin path to `~/.profile`"
@@ -38,12 +38,10 @@ source ~/.profile
 infoh1 "yarn"
 
 pblue "Installing vue-cli..."
-yarn global add @vue/cli >> "$LOG_DIR.dotfiles.log"
+yarn global add @vue/cli > /dev/null 2>&1
 
 pblue "checking installation..."
 vue --version
 pgreen "Setup complete"
-
-wait_for_keypress
 
 echo -e "\n\n"
