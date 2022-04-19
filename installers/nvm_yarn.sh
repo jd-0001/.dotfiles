@@ -32,4 +32,14 @@ pblue "Adding yarn global bin path to `~/.profile`"
 echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
 pgreen "Path added"
 
+pblue "Installing vue-cli..."
+yarn global add @vue/cli >> "$LOG_DIR.dotfiles.log"
+npm --version
+
+pblue "checking installations..."
+vue --version
+pblue "if you are seeing the version then, you are good to go!"
+
+wait_for_keypress
+
 echo -e "\n\n"
