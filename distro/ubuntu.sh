@@ -16,7 +16,7 @@ dconf write /org/gtk/settings/file-chooser/show-hidden true
 
 pblue "Configuring dock settings..."
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
-dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position 'BOTTOM'
+dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "BOTTOM"
 dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
 
 pblue "Adding favorite apps..."
@@ -24,10 +24,10 @@ dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'slac
 # gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'slack.desktop', 'google-chrome.desktop', 'code.desktop']"
 
 pblue "Updating keyboard shortcuts for screenshot."
-pblue "It will save screenshots in /tmp dir instead of Pictures dir"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding '<Super>e'
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command 'xdg-open /tmp'
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name 'Open /tmp dir'
+# pblue "It will save screenshots in /tmp dir instead of Pictures dir"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "<Super>e"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "xdg-open /tmp"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "Open /tmp dir"
 
 # gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Open /tmp dir'
 # gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'xdg-open /tmp'
