@@ -78,3 +78,6 @@ source "$(dirname "$0")/utils/vars.sh"
 
 # configure gnome
 /bin/bash "$(dirname "$0")/distro/ubuntu.sh"
+
+# Rachana
+/bin/bash "$(dirname "$0")/rachana.sh"
