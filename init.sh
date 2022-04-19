@@ -69,6 +69,7 @@ pgreen "Snaps cleaned from the system\n"
 /bin/bash "$(dirname "$0")/installers/poetry.sh"
 /bin/bash "$(dirname "$0")/installers/pyenv.sh"
 /bin/bash "$(dirname "$0")/installers/xonsh.sh"
+/bin/bash "$(dirname "$0")/installers/vue-cli.sh"
 
 # symlinks
 /bin/bash "$(dirname "$0")/link.sh"
