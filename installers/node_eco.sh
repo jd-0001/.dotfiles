@@ -13,7 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 pgreen "nvm setup complete\n"
 
 pblue "Insallin Node LTS version & setting it as default version"
-nvm install --lts && nvm use --lts > /dev/null 2>&1
+nvm install --lts > /dev/null 2>&1 && nvm use --lts > /dev/null 2>&1
 pgreen "nvm installation and setup completed"
 
 echo -e "\n\n"
@@ -35,7 +35,7 @@ pgreen "Path added\n"
 source ~/.bashrc
 source ~/.profile
 
-infoh1 "yarn"
+infoh1 "Vue CLI"
 
 pblue "Installing vue-cli..."
 yarn global add @vue/cli > /dev/null 2>&1
