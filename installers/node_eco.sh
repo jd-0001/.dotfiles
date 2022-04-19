@@ -13,7 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 pgreen "nvm setup complete\n"
 
 pblue "Insallin Node LTS version & setting it as default version"
-nvm install --lts && nvm use --lts >> "$LOG_DIR.dotfiles.log"
+nvm install --lts >> "$LOG_DIR.dotfiles.log" && nvm use --lts >> "$LOG_DIR.dotfiles.log"
 pgreen "nvm installation and setup completed"
 
 echo -e "\n\n"
@@ -30,7 +30,9 @@ pgreen "Yarn installed\n"
 
 pblue "Adding yarn global bin path to `~/.profile`"
 echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
-pgreen "Path added"
+pgreen "Path added\n"
+
+infoh1 "yarn"
 
 pblue "Installing vue-cli..."
 yarn global add @vue/cli >> "$LOG_DIR.dotfiles.log"
