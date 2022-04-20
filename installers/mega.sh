@@ -22,7 +22,7 @@ sudo gdebi -n /tmp/megasync*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "mega sync installed\n"
 
 # Login mega
-pblue "Login to mega. Press any key to continue."
+pblue "Login to mega and remove ignore pattern \".*\" from megasync settings. Press any key to continue."
 wait_for_keypress
 
 # Symlink files & dirs
@@ -31,7 +31,7 @@ pblue "Symlinking files & dirs..."
 sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.git-credentials ~
 pgreen ".git-credentials symlinked"
 
-sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.ssh ~
+sudo ln -s -f ~/MEGAsync/.dotfiles/\$HOME/.ssh ~
 pgreen ".ssh dir symlinked"
 
 sudo ln -s -f ~/MEGAsync/.dotfiles/\$HOME/.gnupg ~
@@ -40,4 +40,4 @@ pgreen ".gnupg dir symlinked"
 # Create dir if doesn't exist for keyrings
 mkdir -p ~/.local/share/
 sudo ln -s -f ~/MEGAsync/.dotfiles/keyrings ~/.local/share/keyrings
-pgreen ".gnupg dir symlinked"
+pgreen "keyrings dir symlinked"
