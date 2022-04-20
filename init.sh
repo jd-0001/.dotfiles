@@ -58,30 +58,30 @@ source "$(dirname "$0")/utils/vars.sh"
 # pgreen "Snaps cleaned from the system\n"
 
 # # Install applications in order
-/bin/bash "$(dirname "$0")/installers/gdebi.sh"
-/bin/bash "$(dirname "$0")/installers/curl.sh"
-/bin/bash "$(dirname "$0")/installers/chrome.sh"
-/bin/bash "$(dirname "$0")/installers/mega.sh"
-/bin/bash "$(dirname "$0")/installers/slack.sh"
-/bin/bash "$(dirname "$0")/installers/gnome-tweaks.sh"
-/bin/bash "$(dirname "$0")/installers/node_eco.sh"
-/bin/bash "$(dirname "$0")/installers/vscode.sh"
-/bin/bash "$(dirname "$0")/installers/dconf.sh"
-/bin/bash "$(dirname "$0")/installers/xclip.sh"
-/bin/bash "$(dirname "$0")/installers/poetry.sh"
-/bin/bash "$(dirname "$0")/installers/pyenv.sh"
-/bin/bash "$(dirname "$0")/installers/secret-tool.sh"
-/bin/bash "$(dirname "$0")/installers/vim.sh"
+# /bin/bash "$(dirname "$0")/installers/gdebi.sh"
+# /bin/bash "$(dirname "$0")/installers/curl.sh"
+# /bin/bash "$(dirname "$0")/installers/chrome.sh"
+# /bin/bash "$(dirname "$0")/installers/mega.sh"
+# /bin/bash "$(dirname "$0")/installers/slack.sh"
+# /bin/bash "$(dirname "$0")/installers/gnome-tweaks.sh"
+# /bin/bash "$(dirname "$0")/installers/node_eco.sh"
+# /bin/bash "$(dirname "$0")/installers/vscode.sh"
+# /bin/bash "$(dirname "$0")/installers/dconf.sh"
+# /bin/bash "$(dirname "$0")/installers/xclip.sh"
+# /bin/bash "$(dirname "$0")/installers/poetry.sh"
+# /bin/bash "$(dirname "$0")/installers/pyenv.sh"
+# /bin/bash "$(dirname "$0")/installers/secret-tool.sh"
+/bin/bash "$(dirname "$0")/installers/dracula-theme.sh"
 /bin/bash "$(dirname "$0")/installers/xonsh.sh"
 
 # symlinks
-/bin/bash "$(dirname "$0")/link.sh"
+# /bin/bash "$(dirname "$0")/link.sh"
 
 # configure gnome
-/bin/bash "$(dirname "$0")/distro/ubuntu.sh"
+# /bin/bash "$(dirname "$0")/distro/ubuntu.sh"
 
 # Rachana
-/bin/bash "$(dirname "$0")/rachana.sh"
+# /bin/bash "$(dirname "$0")/rachana.sh"
 
 echo -e "\n"
 
