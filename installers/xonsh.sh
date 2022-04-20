@@ -4,10 +4,10 @@ source "$(dirname "$0")/../utils/vars.sh"
 infoh1 "xonsh"
 
 pblue "Installing pip..."
-sudo apt install python3-pip -y >> "$LOG_DIR.dotfiles.log"
+sudo apt-get install python3-pip -y >> "$LOG_DIR.dotfiles.log"
 
 pblue "Installing xonsh..."
-sudo apt install -y xonsh >> "$LOG_DIR.dotfiles.log"
+sudo apt-get install -y xonsh >> "$LOG_DIR.dotfiles.log"
 
 pblue "Make sure xonsh is in /etc/shells"
 echo "printing /etc/shells:"
