@@ -62,9 +62,9 @@ ln -sfn ~/MEGAsync/.dotfiles/\$HOME/.ssh ~
 pgreen ".ssh dir symlinked"
 
 # Remove directory if exist because ln -sfn can't overwrite existing directory
-# rm -rf ~/.gnupg
-# ln -sfn ~/MEGAsync/.dotfiles/\$HOME/.gnupg ~
-# pgreen ".gnupg dir symlinked"
+rm -rf ~/.gnupg
+ln -sfn ~/MEGAsync/.dotfiles/\$HOME/.gnupg ~
+pgreen ".gnupg dir symlinked"
 
 # Remove directory if exist because ln -sfn can't overwrite existing directory
 rm -rf ~/.local/share/keyrings
