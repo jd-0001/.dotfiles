@@ -10,7 +10,7 @@ pgreen "Chrome downloaded\n"
 
 # Install chrome
 pblue "Installing chrome now..."
-sudo gdebi -n /tmp/google-chrome-stable_current_amd64.deb >> "$LOG_DIR.dotfiles.log"
+sudo gdebi -n /tmp/google-chrome-stable_current_amd64.deb
 pgreen "Chrome installed\n"
 
 # Manual configuration
