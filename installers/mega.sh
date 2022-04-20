@@ -9,9 +9,8 @@ wait_for_keypress
 ubuntu_version=$(lsb_release -r | grep -oP "[\d\.]+")
 
 # Download mega
-pblue "Downloading megasync & nautils integration from available files..."
-echo "Press any key once both downloads are done"
-echo -e "https://mega.nz/linux/repo/xUbuntu_$ubuntu_version/amd64/"
+pblue "Downloade megasync from https://mega.nz/linux/repo/xUbuntu_$ubuntu_version/amd64/"
+echo "Press any key once download is done"
 pblue "Opening browser in 3 seconds..."
 sleep 3
 google-chrome "https://mega.nz/linux/repo/xUbuntu_$ubuntu_version/amd64/" > /dev/null 2>&1 &
@@ -19,9 +18,5 @@ wait_for_keypress
 
 # Install mega
 pblue "Installing mega sync now..."
-# sudo gdebi /tmp/megasync*.deb >> "$LOG_DIR.dotfiles.log"
-sudo gdebi /tmp/megasync*.deb
+sudo gdebi -n /tmp/megasync*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "mega sync installed\n"
-
-# WIP
-# Install gdebi
