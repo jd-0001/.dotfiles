@@ -36,7 +36,7 @@ echo -e "\n"
 # https://github.com/oh-my-xonsh/xontrib-default-command
 pblue "default command"
 /usr/bin/xonsh -c "xpip install xontrib-default-command" >> "$LOG_DIR.dotfiles.log"
-echo "xontrib load default-command" >> ~/.xonshrc
+echo "xontrib load default_command" >> ~/.xonshrc
 
 # https://github.com/cafehaine/xontrib-xlsd
 pblue "xlsd"
