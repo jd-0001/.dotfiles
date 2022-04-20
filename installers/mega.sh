@@ -30,7 +30,7 @@ infoh1 "Mega"
 
 # ==== Permissions ===============
 
-chown --recursive USERNAME:USERNAME ~/.ssh
+chown --recursive $USER:$USER ~/.ssh
 chmod 755 ~/.ssh
 # chmod 644 ~/.ssh/known_hosts
 # chmod 644 ~/.ssh/authorized_keys
@@ -40,7 +40,7 @@ chmod 600 ~/.ssh/id_rsa.pub
 # repeat the last two for other public/private pairs
 # you may need to "service ssh restart" after changing these values
 
-chown --recursive USERNAME:USERNAME ~/.gnupg
+chown --recursive $USER:$USER ~/.gnupg
 chmod 700 ~/.gnupg
 chmod 600 ~/.gnupg/*
 # for any subfolders, you need to apply 700 to the folder
