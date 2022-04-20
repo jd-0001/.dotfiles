@@ -30,5 +30,14 @@ pblue "Symlinking files & dirs..."
 
 sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.git-credentials ~
 pgreen ".git-credentials symlinked"
+
 sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.ssh ~
 pgreen ".ssh dir symlinked"
+
+# sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.gnupg ~
+# pgreen ".gnupg dir symlinked"
+
+# Create dir if doesn't exist for keyrings
+mkdir -p ~/.local/share/
+sudo ln -s ~/MEGAsync/.dotfiles/keyrings ~/.local/share/keyrings
+pgreen ".gnupg dir symlinked"
