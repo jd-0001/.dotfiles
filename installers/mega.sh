@@ -32,8 +32,8 @@ infoh1 "Mega"
 
 chown --recursive USERNAME:USERNAME ~/.ssh
 chmod 755 ~/.ssh
-chmod 644 ~/.ssh/known_hosts
-chmod 644 ~/.ssh/authorized_keys
+# chmod 644 ~/.ssh/known_hosts
+# chmod 644 ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/config
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa.pub
