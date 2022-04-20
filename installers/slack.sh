@@ -11,7 +11,7 @@ google-chrome https://slack.com/intl/en-in/downloads/linux > /dev/null 2>&1 &
 wait_for_keypress
 
 pblue "Installing slack..."
-sudo dpkg -i /tmp/slack*.deb >> "$LOG_DIR.dotfiles.log"
+sudo gdebi /tmp/slack*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "Slack installed"
 
 pblue "Opening slack in 3 seconds..."

@@ -17,9 +17,9 @@ google-chrome "https://mega.nz/linux/repo/xUbuntu_$ubuntu_version/amd64/" > /dev
 wait_for_keypress
 
 # Install mega
-pblue "Installing mega now..."
-sudo dpkg -i /tmp/megasync*.deb >> "$LOG_DIR.dotfiles.log"
-pgreen "Chrome installed\n"
+pblue "Installing mega sync now..."
+sudo gdebi /tmp/megasync*.deb >> "$LOG_DIR.dotfiles.log"
+pgreen "mega sync installed\n"
 
 # WIP
 # Install gdebi
