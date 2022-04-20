@@ -28,6 +28,28 @@ infoh1 "Mega"
 # megasync > /dev/null 2>&1 &
 # wait_for_keypress
 
+# ==== Permissions ===============
+
+chown --recursive USERNAME:USERNAME ~/.ssh
+chmod 755 ~/.ssh
+chmod 644 ~/.ssh/known_hosts
+chmod 644 ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/config
+chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa.pub
+# repeat the last two for other public/private pairs
+# you may need to "service ssh restart" after changing these values
+
+chown --recursive USERNAME:USERNAME ~/.gnupg
+chmod 700 ~/.gnupg
+chmod 600 ~/.gnupg/*
+# for any subfolders, you need to apply 700 to the folder
+# and 600 to the files in that subfolder:
+# chmod 700 ~/.gnupg/subfolder
+# chmod 600 ~/.gnupg/subfolder/*
+
+# ==== / Permissions ===============
+
 # Symlink files & dirs
 pblue "Symlinking files & dirs..."
 
