@@ -68,6 +68,7 @@ pgreen "Snaps cleaned from the system\n"
 /bin/bash "$(dirname "$0")/installers/xclip.sh"
 /bin/bash "$(dirname "$0")/installers/poetry.sh"
 /bin/bash "$(dirname "$0")/installers/pyenv.sh"
+/bin/bash "$(dirname "$0")/installers/secret-tool.sh"
 /bin/bash "$(dirname "$0")/installers/xonsh.sh"
 
 # symlinks
