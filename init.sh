@@ -60,7 +60,7 @@ source "$(dirname "$0")/utils/vars.sh"
 # # Install applications in order
 # /bin/bash "$(dirname "$0")/installers/gdebi.sh"
 /bin/bash "$(dirname "$0")/installers/vim.sh"
-# /bin/bash "$(dirname "$0")/installers/curl.sh"
+/bin/bash "$(dirname "$0")/installers/curl.sh"
 # /bin/bash "$(dirname "$0")/installers/chrome.sh"
 # /bin/bash "$(dirname "$0")/installers/mega.sh"
 # /bin/bash "$(dirname "$0")/installers/slack.sh"
@@ -76,10 +76,10 @@ source "$(dirname "$0")/utils/vars.sh"
 # /bin/bash "$(dirname "$0")/installers/xonsh.sh"
 
 # symlinks
-# /bin/bash "$(dirname "$0")/link.sh"
+/bin/bash "$(dirname "$0")/link.sh"
 
 # configure gnome
-# /bin/bash "$(dirname "$0")/distro/ubuntu.sh"
+/bin/bash "$(dirname "$0")/distro/ubuntu.sh"
 
 # Rachana
 # /bin/bash "$(dirname "$0")/rachana.sh"
