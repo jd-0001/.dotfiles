@@ -20,3 +20,15 @@ wait_for_keypress
 pblue "Installing mega sync now..."
 sudo gdebi -n /tmp/megasync*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "mega sync installed\n"
+
+# Login mega
+pblue "Login to mega. Press any key to continue."
+wait_for_keypress
+
+# Symlink files & dirs
+pblue "Symlinking files & dirs..."
+
+sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.git-credentials ~
+pgreen ".git-credentials symlinked"
+sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.ssh ~
+pgreen ".ssh dir symlinked"

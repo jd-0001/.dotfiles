@@ -76,9 +76,6 @@ source "$(dirname "$0")/utils/vars.sh"
 # symlinks
 # /bin/bash "$(dirname "$0")/link.sh"
 
-# credentails
-# /bin/bash "$(dirname "$0")/credentials.sh"
-
 # configure gnome
 # /bin/bash "$(dirname "$0")/distro/ubuntu.sh"
 
