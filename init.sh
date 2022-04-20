@@ -76,10 +76,10 @@ source "$(dirname "$0")/utils/vars.sh"
 /bin/bash "$(dirname "$0")/installers/xonsh.sh"
 
 # symlinks
-# /bin/bash "$(dirname "$0")/link.sh"
+/bin/bash "$(dirname "$0")/link.sh"
 
 # configure gnome
-# /bin/bash "$(dirname "$0")/distro/ubuntu.sh"
+/bin/bash "$(dirname "$0")/distro/ubuntu.sh"
 
 # Rachana
 # /bin/bash "$(dirname "$0")/rachana.sh"
