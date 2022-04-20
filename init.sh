@@ -58,9 +58,9 @@ source "$(dirname "$0")/utils/vars.sh"
 # pgreen "Snaps cleaned from the system\n"
 
 # # Install applications in order
-# /bin/bash "$(dirname "$0")/installers/gdebi.sh"
+/bin/bash "$(dirname "$0")/installers/gdebi.sh"
 /bin/bash "$(dirname "$0")/installers/vim.sh"
-# /bin/bash "$(dirname "$0")/installers/curl.sh"
+/bin/bash "$(dirname "$0")/installers/curl.sh"
 # /bin/bash "$(dirname "$0")/installers/chrome.sh"
 # /bin/bash "$(dirname "$0")/installers/mega.sh"
 # /bin/bash "$(dirname "$0")/installers/slack.sh"
@@ -69,8 +69,8 @@ source "$(dirname "$0")/utils/vars.sh"
 # /bin/bash "$(dirname "$0")/installers/vscode.sh"
 # /bin/bash "$(dirname "$0")/installers/dconf.sh"
 # /bin/bash "$(dirname "$0")/installers/xclip.sh"
-# /bin/bash "$(dirname "$0")/installers/poetry.sh"
-# /bin/bash "$(dirname "$0")/installers/pyenv.sh"
+/bin/bash "$(dirname "$0")/installers/poetry.sh"
+/bin/bash "$(dirname "$0")/installers/pyenv.sh"
 # /bin/bash "$(dirname "$0")/installers/secret-tool.sh"
 /bin/bash "$(dirname "$0")/installers/dracula-theme.sh"
 /bin/bash "$(dirname "$0")/installers/xonsh.sh"
@@ -87,5 +87,6 @@ source "$(dirname "$0")/utils/vars.sh"
 echo -e "\n"
 
 pgreen "You are ready to rock!"
-
-# https://askubuntu.com/questions/907425/how-do-i-back-up-and-restore-passwords-and-keys
+pblue "Loggin you out of gnome in 3 seconds..."
+sleep 3
+gnome-session-quit
