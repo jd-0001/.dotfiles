@@ -86,3 +86,5 @@ pgreen "Snaps cleaned from the system\n"
 echo -e "\n"
 
 pgreen "You are ready to rock!"
+
+# https://askubuntu.com/questions/907425/how-do-i-back-up-and-restore-passwords-and-keys

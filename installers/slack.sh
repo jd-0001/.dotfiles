@@ -5,6 +5,9 @@ infoh1 "Processing slack"
 
 echo "visit: https://slack.com/intl/en-in/downloads/linux to download slack"
 echo "Press any key once downloading is done"
+pblue "Opening browser with above url in 3 seconds..."
+sleep 3
+google-chrome https://slack.com/intl/en-in/downloads/linux > /dev/null 2>&1 &
 wait_for_keypress
 
 pblue "Installing slack..."
