@@ -8,7 +8,7 @@ echo "Press any key once downloading is done"
 wait_for_keypress
 
 pblue "Installing vscode..."
-sudo gdebi /tmp/code*.deb >> "$LOG_DIR.dotfiles.log"
+sudo gdebi -n /tmp/code*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "vscode installed"
 
 echo "sign in using github and sync settings"
