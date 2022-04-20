@@ -58,7 +58,7 @@ source "$(dirname "$0")/utils/vars.sh"
 # pgreen "Snaps cleaned from the system\n"
 
 # # Install applications in order
-/bin/bash "$(dirname "$0")/installers/gdebi.sh"
+# /bin/bash "$(dirname "$0")/installers/gdebi.sh"
 # /bin/bash "$(dirname "$0")/installers/curl.sh"
 # /bin/bash "$(dirname "$0")/installers/chrome.sh"
 /bin/bash "$(dirname "$0")/installers/mega.sh"
@@ -70,7 +70,7 @@ source "$(dirname "$0")/utils/vars.sh"
 # /bin/bash "$(dirname "$0")/installers/xclip.sh"
 # /bin/bash "$(dirname "$0")/installers/poetry.sh"
 # /bin/bash "$(dirname "$0")/installers/pyenv.sh"
-/bin/bash "$(dirname "$0")/installers/secret-tool.sh"
+# /bin/bash "$(dirname "$0")/installers/secret-tool.sh"
 # /bin/bash "$(dirname "$0")/installers/xonsh.sh"
 
 # symlinks
