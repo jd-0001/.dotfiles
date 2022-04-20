@@ -53,16 +53,16 @@ chmod 600 ~/.gnupg/*
 # Symlink files & dirs
 pblue "Symlinking files & dirs..."
 
-sudo ln -s ~/MEGAsync/.dotfiles/\$HOME/.git-credentials ~
+sudo ln -sf ~/MEGAsync/.dotfiles/\$HOME/.git-credentials ~
 pgreen ".git-credentials symlinked"
 
-sudo ln -s -f ~/MEGAsync/.dotfiles/\$HOME/.ssh ~
+sudo ln -sfn ~/MEGAsync/.dotfiles/\$HOME/.ssh ~
 pgreen ".ssh dir symlinked"
 
-sudo ln -s -f ~/MEGAsync/.dotfiles/\$HOME/.gnupg ~
+sudo ln -sfn ~/MEGAsync/.dotfiles/\$HOME/.gnupg ~
 pgreen ".gnupg dir symlinked"
 
 # Create dir if doesn't exist for keyrings
 mkdir -p ~/.local/share/
-sudo ln -s -f ~/MEGAsync/.dotfiles/keyrings ~/.local/share/keyrings
+sudo ln -sfn ~/MEGAsync/.dotfiles/keyrings ~/.local/share/keyrings
 pgreen "keyrings dir symlinked"
