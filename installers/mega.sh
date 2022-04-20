@@ -66,7 +66,9 @@ pgreen ".ssh dir symlinked"
 # ln -sfn ~/MEGAsync/.dotfiles/\$HOME/.gnupg ~
 # pgreen ".gnupg dir symlinked"
 
-# Create dir if doesn't exist for keyrings
-mkdir -p ~/.local/share/
+# Remove directory if exist because ln -sfn can't overwrite existing directory
+rm -rf ~/.local/share/keyrings
 ln -sfn ~/MEGAsync/.dotfiles/keyrings ~/.local/share/keyrings
-pgreen "keyrings dir symlinked"
+pgreen "keyrings dir symlinked\n"
+
+pgreen "mega setup\n"
