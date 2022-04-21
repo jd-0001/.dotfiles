@@ -39,7 +39,6 @@ $LESS = "--ignore-case --quit-if-one-screen --quit-on-intr FRXQ"
 # ==================================================================================
 
 _xontribs = [
-    'up',
     'cmd_done',
     'default_command',
     'xlsd',

@@ -24,12 +24,6 @@ echo -e "\n\n"
 
 infoh1 "xonsh extensions"
 
-# https://github.com/oh-my-xonsh/xontrib-up
-pblue "Installing up"
-/usr/bin/xonsh -c "xpip install xontrib-up" >> "$LOG_DIR.dotfiles.log"
-# echo "xontrib load up" >> ~/.xonshrc
-echo -e "\n"
-
 # https://github.com/jnoortheen/xontrib-cmd-durations
 pblue "Installing cmd_done"
 /usr/bin/xonsh -c "xpip install xontrib-cmd-durations" >> "$LOG_DIR.dotfiles.log"
