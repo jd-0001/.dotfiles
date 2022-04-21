@@ -52,7 +52,7 @@ read wait_for_keypress
 
 pblue "Removing snap related stuff..."
 sudo rm -rf /var/cache/snapd/ >> "$LOG_DIR.dotfiles.log"
-sudo apt autoremove --purge snapd gnome-software-plugin-snap -y >> "$LOG_DIR.dotfiles.log"
+sudo apt-get autoremove --purge snapd gnome-software-plugin-snap -y >> "$LOG_DIR.dotfiles.log"
 rm -fr ~/snap
 sudo apt-mark hold snapd >> "$LOG_DIR.dotfiles.log"
 pgreen "Snaps cleaned from the system\n"
