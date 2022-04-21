@@ -76,4 +76,4 @@ rm -rf ~/.local/share/fonts
 ln -sfn ~/MEGAsync/.dotfiles/.local~share/fonts ~/.local/share/fonts
 pgreen "fonts dir symlinked\n"
 
-pgreen "mega setup\n"
+pgreen "mega setup completed\n"

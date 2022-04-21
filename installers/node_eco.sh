@@ -12,7 +12,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 pgreen "nvm setup complete\n"
 
-pblue "Insallin Node LTS version & setting it as default version"
+pblue "Insalling Node LTS version & setting it as default version"
 nvm install --lts > /dev/null 2>&1 && nvm use --lts > /dev/null 2>&1
 pgreen "nvm installation and setup completed"
 
@@ -27,7 +27,7 @@ pblue "Installing yarn..."
 npm install --global yarn > /dev/null 2>&1
 pgreen "Yarn installed\n"
 
-pblue "Adding yarn global bin path to `~/.profile`"
+pblue "Adding yarn global bin path to '~/.profile'"
 echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
 pgreen "Path added\n"
 

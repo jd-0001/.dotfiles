@@ -3,12 +3,14 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "Poetry"
 
-pblue "installing venv"
+pblue "Installing venv"
 # python --version | grep -oP "\w+\s\d\.\d+" | sed 's/ //' => python3.10 (two digit version)
 sudo apt-get install $(python3 --version | grep -oP "\w+\s\d\.\d+" | sed 's/ //')-venv -y >> "$LOG_DIR.dotfiles.log"
+pgreen "venv installed\n"
 
 pblue "Installing poetry..."
 curl -sSL https://install.python-poetry.org | python3 - >> "$LOG_DIR.dotfiles.log"
+pgreen "poetry installed\n"
 
 pblue "Adding ~/.local/bin to PATH"
 echo -e '\n\n#Poetry\nexport PATH="$HOME/.local/bin:$PATH"' >> ~/.profile

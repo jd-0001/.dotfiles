@@ -5,9 +5,11 @@ infoh1 "xonsh"
 
 pblue "Installing pip..."
 sudo apt-get install python3-pip -y >> "$LOG_DIR.dotfiles.log"
+pgreen "pip installed\n"
 
 pblue "Installing xonsh..."
 sudo apt-get install -y xonsh >> "$LOG_DIR.dotfiles.log"
+pgreen "xonsh installed\n"
 
 pblue "Make sure xonsh is in /etc/shells"
 echo "printing /etc/shells:"

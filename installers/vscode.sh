@@ -11,12 +11,13 @@ pblue "Installing vscode..."
 sudo gdebi -n /tmp/code*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "vscode installed"
 
-echo "sign in using github and sync settings"
+echo "Turn on settings sync - login via github"
 
 pblue "Opening vscode in 3 seconds..."
 sleep 3
 code > /dev/null 2>&1 &
 
+pblue "Press any key once done"
 wait_for_keypress
 
 echo -e "\n\n"
