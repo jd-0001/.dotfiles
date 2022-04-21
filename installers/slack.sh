@@ -12,7 +12,7 @@ wait_for_keypress
 
 pblue "Installing slack..."
 sudo gdebi -n /tmp/slack*.deb >> "$LOG_DIR.dotfiles.log"
-pgreen "Slack installed"
+pgreen "Slack installed\n"
 
 pblue "Opening slack in 3 seconds..."
 sleep 3

@@ -5,6 +5,6 @@ infoh1 "cURL"
 
 pblue "Installing cURL"
 sudo apt-get install curl >> "$LOG_DIR.dotfiles.log"
-pgreen "cURL installed\n"
+pgreen "cURL installed"
 
 echo -e "\n\n"

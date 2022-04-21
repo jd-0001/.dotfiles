@@ -56,3 +56,5 @@ echo -e "\n"
 
 pblue "You need to login and logout to use xonsh as default shell"
 pgreen "xonsh setup completed"
+
+echo -e "\n\n"

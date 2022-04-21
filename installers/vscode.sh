@@ -9,9 +9,9 @@ wait_for_keypress
 
 pblue "Installing vscode..."
 sudo gdebi -n /tmp/code*.deb >> "$LOG_DIR.dotfiles.log"
-pgreen "vscode installed"
+pgreen "vscode installed\n"
 
-echo "Turn on settings sync - login via github"
+pblue "Turn on settings sync - login via github"
 
 pblue "Opening vscode in 3 seconds..."
 sleep 3

@@ -5,7 +5,7 @@ infoh1 "Rachana"
 
 pblue "Getting rachana"
 git clone https://github.com/jd-0001/rachana ~/Rachana >> "$LOG_DIR.dotfiles.log"
-pgreen "Clone successful"
+pgreen "Clone successful\n"
 
 pblue "installing rachana packages using poetry..."
 cd ~/Rachana

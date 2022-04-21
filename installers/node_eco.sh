@@ -40,7 +40,7 @@ infoh1 "Vue CLI"
 pblue "Installing vue-cli..."
 yarn global add @vue/cli > /dev/null 2>&1
 
-pblue "checking installation..."
+pblue "checking installation by printing vue version..."
 vue --version
 pgreen "Setup complete"
 

@@ -69,11 +69,13 @@ pgreen ".gnupg dir symlinked"
 # Remove directory if exist because ln -sfn can't overwrite existing directory
 rm -rf ~/.local/share/keyrings
 ln -sfn ~/MEGAsync/.dotfiles/.local~share/keyrings ~/.local/share/keyrings
-pgreen "keyrings dir symlinked\n"
+pgreen "keyrings dir symlinked"
 
 # Remove directory if exist because ln -sfn can't overwrite existing directory
 rm -rf ~/.local/share/fonts
 ln -sfn ~/MEGAsync/.dotfiles/.local~share/fonts ~/.local/share/fonts
 pgreen "fonts dir symlinked\n"
 
-pgreen "mega setup completed\n"
+pgreen "mega setup completed"
+
+echo -e "\n\n"
