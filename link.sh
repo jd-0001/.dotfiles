@@ -7,6 +7,7 @@ infoh1 "Symlinks"
 LINKS_DIR="$(dirname "$0")/links/"
 
 sudo ln -s $(realpath $LINKS_DIR)/.bash_aliases ~
+sudo ln -s $(realpath $LINKS_DIR)/.xonshrc ~
 sudo ln -s $(realpath $LINKS_DIR)/.gitconfig ~
 sudo ln -s $(realpath $LINKS_DIR)/.vimrc ~
 
