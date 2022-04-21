@@ -57,6 +57,9 @@ rm -fr ~/snap
 sudo apt-mark hold snapd >> "$LOG_DIR.dotfiles.log"
 pgreen "Snaps cleaned from the system\n"
 
+# symlinks
+/bin/bash "$(dirname "$0")/link.sh"
+
 # # Install applications in order
 /bin/bash "$(dirname "$0")/installers/gdebi.sh"
 /bin/bash "$(dirname "$0")/installers/vim.sh"
@@ -75,8 +78,6 @@ pgreen "Snaps cleaned from the system\n"
 /bin/bash "$(dirname "$0")/installers/dracula-theme.sh"
 /bin/bash "$(dirname "$0")/installers/xonsh.sh"
 
-# symlinks
-/bin/bash "$(dirname "$0")/link.sh"
 
 # configure gnome
 /bin/bash "$(dirname "$0")/distro/ubuntu.sh"

@@ -1,0 +1,114 @@
+# Thanks: https://github.com/anki-code/awesome-xonshrc
+# Cheatsheet: https://github.com/anki-code/xonsh-cheatsheet
+# Bash to xonsh: https://xon.sh/bash_to_xsh.html
+
+# The SQLite history backend saves command immediately 
+# unlike JSON backend that save the commands at the end of the session.
+$XONSH_HISTORY_BACKEND = 'sqlite'
+
+# What commands are saved to the history list. By default all commands are saved. 
+# * The option ‘ignoredups’ will not save the command if it matches the previous command.
+# * The option `erasedups` will remove all previous commands that matches and updates the command frequency. 
+#   The minus of `erasedups` is that the history of every session becomes unrepeatable 
+#   because it will have a lack of the command you repeat in another session.
+# Docs: https://xonsh.github.io/envvars.html#histcontrol
+$HISTCONTROL='ignoredups'
+
+
+# Remove front dot in multiline input to make the code copy-pastable.
+$MULTILINE_PROMPT=' '
+
+
+# Avoid typing cd just directory path. 
+# Docs: https://xonsh.github.io/envvars.html#auto-cd
+$AUTO_CD = True
+    
+# Globbing files with “*” or “**” will also match dotfiles, or those ‘hidden’ files whose names begin with a literal ‘.’. 
+# Note! This affects also on rsync and other tools.
+$DOTGLOB = True
+
+# Don't clear the screen after quitting a manual page.
+$MANPAGER = "less -X"
+$LESS = "--ignore-case --quit-if-one-screen --quit-on-intr FRXQ"
+    
+# ==================================================================================
+#  Xontribs
+#  -------------------------
+#  Official list - https://xon.sh/xontribs.html
+#  Github topic with thumbnails - https://github.com/topics/xontrib
+# ==================================================================================
+
+_xontribs = [
+    'up',
+    'cmd_done',
+    'default_command',
+    'xlsd',
+    'pyenv',
+]
+if _xontribs:
+    xontrib load @(_xontribs)
+
+
+# ==================================================================================
+# -- Aliases
+# ==================================================================================
+
+# cd-ing shortcuts.
+aliases['.'] = 'cd ..'
+aliases['..'] = 'cd ../..'
+aliases['...'] = 'cd ../../..'
+aliases['....'] = 'cd ../../../..'
+
+# List all files: sorted, with colors, directories will be first (Midnight Commander style).
+aliases['ll'] = "$LC_COLLATE='C' ls --group-directories-first -lAh --color @($args)"
+
+# Make directory and cd into it.
+# Example: md /tmp/my/awesome/dir/will/be/here
+aliases['md'] = 'mkdir -p $arg0 && cd $arg0'
+    
+# Using rsync instead of cp to get the progress and speed of copying.
+aliases['cp'] = ['rsync', '--progress', '--recursive', '--archive']
+
+# Grepping string occurrences recursively starting from current directory.
+# Example: cd ~/git/xonsh && greps environ
+aliases['greps'] = 'grep -ri'
+
+# Copy output to current clipboard using xclip
+# Example: echo hello | clp
+aliases['clp'] = 'xclip -sel clip'    
+
+# SSH: Suppress "Connection close" message.
+aliases['ssh'] = 'ssh -o LogLevel=QUIET'
+
+# Run http server in the current directory.
+aliases['http'] = 'python3 -m http.server'
+
+# Open directory in file manager from terminal
+aliases['='] = 'xdg-open'
+
+# Activates poetry environnent without writing env dir path
+aliases['env-pa'] = 'source @$(poetry env info -p)/bin/activate'
+
+# git: Beautify git log
+aliases['glog'] = "git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+
+# Generates random password
+aliases['gen-pass'] = "openssl rand -base64 20"
+
+# Get external ip of your system
+aliases['ex-ip'] = 'curl ipblue.io/ip'
+
+# Get ip of system
+aliases['ip'] = 'hostname -I'
+
+# nginx: Check syntax
+aliases['nx-syntax'] = 'sudo nginx -t'
+
+# nginx: restart nginx
+aliases['nx-re'] = 'sudo systemctl restart nginx'
+
+# Shorthand for checking status of service
+aliases['service-status'] = 'sudo systemctl status'
+
+# Download gitignore from https://github.com/github/gitignore by name
+# aliases['gignore'] = 'f(){ wget -q "https://raw.githubusercontent.com/github/gitignore/main/$@.gitignore"; mv "$@.gitignore" .gitignore; unset -f f; }; f'
