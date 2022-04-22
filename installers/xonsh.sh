@@ -3,6 +3,9 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "xonsh"
 
+source ~/.profile
+source ~/.bashrc
+
 pblue "Installing python dev dependencies..."
 sudo apt-get install make build-essential libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev python3-dev -y >> "$LOG_DIR.dotfiles.log"
 pgreen "Done!\n"
