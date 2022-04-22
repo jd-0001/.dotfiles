@@ -3,6 +3,19 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "xonsh"
 
+pblue "Creating virtualenv for xonsh using pyenv & poetry..."
+mkdir -r ~/.xonsh
+cd ~/.xonsh
+pblue "Enter the python version to use for xonsh (e.g. 3.10.4):"
+read $pyversion
+pblue "Using python version: $pyversion"
+pyenv local $pyversion
+pblue "Running poetry init..."
+poetry init
+pgreen "poetry added"
+pblue "Adding xonsh to the virtualenv..."
+poetry add 'xonsh[full]'
+
 pblue "Installing pip..."
 sudo apt-get install python3-pip -y >> "$LOG_DIR.dotfiles.log"
 pgreen "pip installed\n"
@@ -43,10 +56,10 @@ pblue "xlsd"
 echo -e "\n"
 
 # https://github.com/dyuri/xontrib-langenv
-# pblue "xontrib-langenv - pyenv"
-# /usr/bin/xonsh -c "xpip install xontrib-langenv" >> "$LOG_DIR.dotfiles.log"
-# # echo "xontrib load pyenv" >> ~/.xonshrc
-# echo -e "\n"
+pblue "xontrib-langenv - pyenv"
+/usr/bin/xonsh -c "xpip install xontrib-langenv" >> "$LOG_DIR.dotfiles.log"
+# echo "xontrib load pyenv" >> ~/.xonshrc
+echo -e "\n"
 
 pblue "You need to login and logout to use xonsh as default shell"
 pgreen "xonsh setup completed"
