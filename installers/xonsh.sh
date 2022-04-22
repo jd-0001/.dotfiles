@@ -33,18 +33,18 @@ pgreen "Done!\n"
 
 pblue "Running poetry init..."
 poetry init
-pgreen "poetry added"
+pgreen "poetry added\n"
 
 pblue "Adding xonsh to the virtualenv..."
-poetry add 'xonsh[full]'
+poetry add 'xonsh[full]'  >> "$LOG_DIR.dotfiles.log"
 
 pblue "Activate poetry virtual env"
 source $(poetry env info -p)/bin/activate
-pgreen "poetry virtual env activated"
+pgreen "poetry virtual env activated\n"
 
 pblue "Checking xonsh"
 which xonsh
-pblue "Now you should see the xonsh version printed. Press any key to continue."
+pblue "You can see xonsh path printed above. Press any key to continue."
 wait_for_keypress
 
 pblue "adding xonsh to /etc/shells"

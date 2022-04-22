@@ -18,30 +18,30 @@ pgreen "nvm installation and setup completed"
 
 echo -e "\n\n"
 
-# infoh1 "yarn"
+infoh1 "yarn"
 
-# # # source bashrc
-# # source ~/.bashrc
+# source bashrc
+source ~/.bashrc
 
-# # pblue "Installing yarn..."
-# # npm install --global yarn > /dev/null 2>&1
-# # pgreen "Yarn installed\n"
+pblue "Installing yarn..."
+npm install --global yarn > /dev/null 2>&1
+pgreen "Yarn installed\n"
 
-# # pblue "Adding yarn global bin path to '~/.profile'"
-# # echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
-# # pgreen "Path added\n"
+pblue "Adding yarn global bin path to '~/.profile'"
+echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
+pgreen "Path added\n"
 
-# # # source
-# # source ~/.bashrc
-# # source ~/.profile
+# source
+source ~/.bashrc
+source ~/.profile
 
-# infoh1 "Vue CLI"
+infoh1 "Vue CLI"
 
-# pblue "Installing vue-cli..."
-# yarn global add @vue/cli > /dev/null 2>&1
+pblue "Installing vue-cli..."
+yarn global add @vue/cli > /dev/null 2>&1
 
-# pblue "checking installation by printing vue version..."
-# vue --version
+pblue "checking installation by printing vue version..."
+vue --version
 pgreen "Setup complete"
 
 echo -e "\n\n"
