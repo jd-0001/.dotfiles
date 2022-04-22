@@ -7,32 +7,41 @@ pblue "Installing python dev dependencies..."
 sudo apt-get install make build-essential libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev python3-dev -y >> "$LOG_DIR.dotfiles.log"
 pgreen "Done!\n"
 
-pblue "Creating virtualenv for xonsh using pyenv & poetry..."
-mkdir -r ~/.xonsh
-cd ~/.xonsh
-pblue "Enter the python version to use for xonsh (e.g. 3.10.4):"
-read $pyversion
-pblue "Using python version: $pyversion"
-pyenv local $pyversion
-pblue "Running poetry init..."
-poetry init
-pgreen "poetry added"
-pblue "Adding xonsh to the virtualenv..."
-poetry add 'xonsh[full]'
-
 pblue "Installing pip..."
 sudo apt-get install python3-pip -y >> "$LOG_DIR.dotfiles.log"
 pgreen "pip installed\n"
 
-pblue "Installing xonsh..."
-sudo apt-get install -y xonsh >> "$LOG_DIR.dotfiles.log"
-pgreen "xonsh installed\n"
+pblue "Creating virtualenv for xonsh using pyenv & poetry..."
+mkdir -r ~/.xonsh
+cd ~/.xonsh
 
-pblue "Make sure xonsh is in /etc/shells"
-echo "printing /etc/shells:"
+pblue "Enter the python version to use for xonsh (e.g. 3.10.4):"
+read $pyversion
+pblue "Using python version: $pyversion"
+pyenv local $pyversion
+
+pblue "Running poetry init..."
+poetry init
+pgreen "poetry added"
+
+pblue "Adding xonsh to the virtualenv..."
+poetry add 'xonsh[full]'
+
+pblue "Activate poetry virtual env"
+source $(poetry env info -p)/bin/activate
+pgreen "poetry virtual env activated"
+
+pblue "Checking xonsh"
+which xonsh
+pblue "Now you should see the xonsh version printed. Press any key to continue."
+wait_for_keypress
+
+pblue "adding xonsh to /etc/shells"
+which xonsh | sudo tee -a /etc/shells
+pgreen "xonsh added to /etc/shells\n"
+
 cat /etc/shells
-echo -e "\nif xonsh is not in /etc/shells, add it to /etc/shells by running which xonsh >> /etc/shells"
-
+pblue "Confirm if xonsh in listed shells. Press any key to continue."
 wait_for_keypress
 
 pblue "setting xonsh as default shell..."
@@ -43,25 +52,25 @@ infoh1 "xonsh extensions"
 
 # https://github.com/jnoortheen/xontrib-cmd-durations
 pblue "Installing cmd_done"
-/usr/bin/xonsh -c "xpip install xontrib-cmd-durations" >> "$LOG_DIR.dotfiles.log"
+$(which xonsh) -c "xpip install xontrib-cmd-durations" >> "$LOG_DIR.dotfiles.log"
 # echo "xontrib load cmd_done" >> ~/.xonshrc
 echo -e "\n"
 
 # https://github.com/oh-my-xonsh/xontrib-default-command
 pblue "default command"
-/usr/bin/xonsh -c "xpip install xontrib-default-command" >> "$LOG_DIR.dotfiles.log"
+$(which xonsh) -c "xpip install xontrib-default-command" >> "$LOG_DIR.dotfiles.log"
 # echo "xontrib load default_command" >> ~/.xonshrc
 echo -e "\n"
 
 # https://github.com/cafehaine/xontrib-xlsd
 pblue "xlsd"
-/usr/bin/xonsh -c "xpip install xontrib-xlsd" >> "$LOG_DIR.dotfiles.log"
+$(which xonsh) -c "xpip install xontrib-xlsd" >> "$LOG_DIR.dotfiles.log"
 # echo "xontrib load xlsd" >> ~/.xonshrc
 echo -e "\n"
 
 # https://github.com/dyuri/xontrib-langenv
 pblue "xontrib-langenv - pyenv"
-/usr/bin/xonsh -c "xpip install xontrib-langenv" >> "$LOG_DIR.dotfiles.log"
+$(which xonsh) -c "xpip install xontrib-langenv" >> "$LOG_DIR.dotfiles.log"
 # echo "xontrib load pyenv" >> ~/.xonshrc
 echo -e "\n"
 

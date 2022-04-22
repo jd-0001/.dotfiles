@@ -42,7 +42,7 @@ _xontribs = [
     'cmd_done',
     'default_command',
     'xlsd',
-    # 'pyenv',
+    'pyenv',
 ]
 if _xontribs:
     xontrib load @(_xontribs)
@@ -58,6 +58,7 @@ aliases['..'] = 'cd ../..'
 aliases['...'] = 'cd ../../..'
 aliases['....'] = 'cd ../../../..'
 
+# This is already in .bash_aliases
 # List all files: sorted, with colors, directories will be first (Midnight Commander style).
 aliases['ll'] = "$LC_COLLATE='C' ls --group-directories-first -lAh --color @($args)"
 
@@ -88,8 +89,9 @@ aliases['='] = 'xdg-open'
 # Activates poetry environnent without writing env dir path
 aliases['env-pa'] = 'source @$(poetry env info -p)/bin/activate'
 
+# This is already in .bash_aliases
 # git: Beautify git log
-aliases['glog'] = "git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+# aliases['glog'] = "git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
 
 # Generates random password
 aliases['gen-pass'] = "openssl rand -base64 20"
