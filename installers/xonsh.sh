@@ -21,6 +21,7 @@ cd ~/.xonsh
 pblue "Enter the python version to use for xonsh (e.g. 3.10.4):"
 read pyversion
 pblue "Using python version: $pyversion"
+pyenv install $pyversion
 pyenv local $pyversion
 
 pblue "Running poetry init..."
