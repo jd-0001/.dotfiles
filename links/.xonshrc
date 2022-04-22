@@ -42,7 +42,7 @@ _xontribs = [
     'cmd_done',
     'default_command',
     'xlsd',
-    'pyenv',
+    # 'pyenv',
 ]
 if _xontribs:
     xontrib load @(_xontribs)
