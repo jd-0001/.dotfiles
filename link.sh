@@ -11,11 +11,6 @@ sudo ln -s $(realpath $LINKS_DIR)/.xonshrc ~
 sudo ln -s $(realpath $LINKS_DIR)/.gitconfig ~
 sudo ln -s $(realpath $LINKS_DIR)/.vimrc ~
 
-mkdir -p ~/.xonsh
-
-# xonsh
-sudo ln -s $(realpath $LINKS_DIR)/.xonsh/nvm ~/.xonsh
-
 pgreen "Symlinks done"
 
 echo -e "\n\n"
