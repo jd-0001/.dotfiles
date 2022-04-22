@@ -16,6 +16,8 @@ This will bootstrap my new system :)
   Now start your ubuntu virtual machine and after following above two steps, run `sudo apt-get install virtualbox-guest-utils -y`. This package will allow accessing the shared directory in your virtual machine.
 </details>
 
+> NOTE: While installing some packages using apt-get you might encounter "Unable to fetch ... 404". In this case, just open new terminal and install that package. This is because installation process have order and failed package might be required for ongoing setup.
+
 ## Credits
 
 - https://askubuntu.com/questions/907425/how-do-i-back-up-and-restore-passwords-and-keys
