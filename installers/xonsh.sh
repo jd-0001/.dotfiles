@@ -12,7 +12,7 @@ sudo apt-get install python3-pip -y >> "$LOG_DIR.dotfiles.log"
 pgreen "pip installed\n"
 
 pblue "Creating virtualenv for xonsh using pyenv & poetry..."
-mkdir -r ~/.xonsh
+mkdir ~/.xonsh
 cd ~/.xonsh
 
 pblue "Enter the python version to use for xonsh (e.g. 3.10.4):"
