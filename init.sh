@@ -63,7 +63,7 @@ source "$(dirname "$0")/utils/vars.sh"
 # # Install applications in order
 # /bin/bash "$(dirname "$0")/installers/gdebi.sh"
 # /bin/bash "$(dirname "$0")/installers/vim.sh"
-# /bin/bash "$(dirname "$0")/installers/curl.sh"
+/bin/bash "$(dirname "$0")/installers/curl.sh"
 # /bin/bash "$(dirname "$0")/installers/chrome.sh"
 # /bin/bash "$(dirname "$0")/installers/mega.sh"
 # /bin/bash "$(dirname "$0")/installers/slack.sh"
