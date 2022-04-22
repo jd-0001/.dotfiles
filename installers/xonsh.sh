@@ -21,8 +21,15 @@ cd ~/.xonsh
 pblue "Enter the python version to use for xonsh (e.g. 3.10.4):"
 read pyversion
 pblue "Using python version: $pyversion"
-pyenv install $pyversion
+echo -e "\n"
+
+pblue "Installing selected python version"
+pyenv install $pyversion >> "$LOG_DIR.dotfiles.log"
+pgreen "Done!\n"
+
+pblue "Setting pyenv to use selected python version"
 pyenv local $pyversion
+pgreen "Done!\n"
 
 pblue "Running poetry init..."
 poetry init
