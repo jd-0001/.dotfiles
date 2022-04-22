@@ -2,8 +2,10 @@
 # Cheatsheet: https://github.com/anki-code/xonsh-cheatsheet
 # Bash to xonsh: https://xon.sh/bash_to_xsh.html
 
-# Source nvm
-source-bash ~/.xonsh/nvm
+source ~/.bashrc
+
+# # Source nvm
+# source-bash ~/.xonsh/nvm
 
 # The SQLite history backend saves command immediately 
 # unlike JSON backend that save the commands at the end of the session.
