@@ -19,7 +19,7 @@ mkdir ~/.xonsh
 cd ~/.xonsh
 
 pblue "Enter the python version to use for xonsh (e.g. 3.10.4):"
-read $pyversion
+read pyversion
 pblue "Using python version: $pyversion"
 pyenv local $pyversion
 
