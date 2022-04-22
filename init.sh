@@ -73,10 +73,10 @@ source "$(dirname "$0")/utils/vars.sh"
 # /bin/bash "$(dirname "$0")/installers/dconf.sh"
 # /bin/bash "$(dirname "$0")/installers/xclip.sh"
 # /bin/bash "$(dirname "$0")/installers/poetry.sh"
-# /bin/bash "$(dirname "$0")/installers/pyenv.sh"
+/bin/bash "$(dirname "$0")/installers/pyenv.sh"
 # /bin/bash "$(dirname "$0")/installers/secret-tool.sh"
 # /bin/bash "$(dirname "$0")/installers/dracula-theme.sh"
-/bin/bash "$(dirname "$0")/installers/xonsh.sh"
+# /bin/bash "$(dirname "$0")/installers/xonsh.sh"
 
 
 # configure gnome
