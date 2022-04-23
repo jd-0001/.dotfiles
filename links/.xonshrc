@@ -118,3 +118,9 @@ aliases['service-status'] = 'sudo systemctl status'
 
 # Download gitignore from https://github.com/github/gitignore by name
 # aliases['gignore'] = 'f(){ wget -q "https://raw.githubusercontent.com/github/gitignore/main/$@.gitignore"; mv "$@.gitignore" .gitignore; unset -f f; }; f'
+
+# Yarn: Add upgrade alias
+aliases['yui'] = "yarn upragde-interactive --latest"
+
+# Node: Remove node_modules related files
+aliases['rmnode'] = 'rm -rf node_modules yarn.lock package-lock.json'
