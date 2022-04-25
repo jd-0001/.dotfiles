@@ -28,11 +28,11 @@ npm install --global yarn > /dev/null 2>&1
 pgreen "Yarn installed\n"
 
 pblue "Adding yarn path..."
-nvm which current | grep -oP ".*/bin" >> ~/.profile
+echo -e '\n\n#Yarn\nexport PATH=$(nvm which current | grep -oP ".*/bin"):$PATH' >> ~/.profile
 pgreen "Yarn path added"
 
 pblue "Adding yarn global bin path to '~/.profile'"
-echo -e '\n\n#Yarn global executables\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
+echo -e '\nexport PATH="$PATH:`yarn global bin`"' >> ~/.profile
 pgreen "Path added\n"
 
 # source
