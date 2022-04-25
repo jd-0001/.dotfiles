@@ -14,40 +14,44 @@ echo "file:///tmp tmp" >> ~/.config/gtk-3.0/bookmarks
 echo "file:///home/jd/Projects/clevision clevision" >> ~/.config/gtk-3.0/bookmarks
 
 pblue "Configuring nautilus..."
+# Enable show hidden files
 dconf write /org/gtk/settings/file-chooser/show-hidden true
+
+# Set zoom level for directory
 dconf write /org/gnome/nautilus/list-view/default-zoom-level "'small'"
+
+# Default directory view list/grid
 dconf write /org/gnome/nautilus/preferences/default-folder-viewer "'list-view'"
+
+# Use tree view when in list view
 dconf write /org/gnome/nautilus/list-view/use-tree-view true
 
+# Show week day with date
 dconf write /org/gnome/desktop/interface/clock-show-weekday true
+
+# Hovering over window focuses it
 dconf write /org/gnome/desktop/wm/preferences/focus-mode "'sloppy'"
 
 pblue "Configuring dock settings..."
+
+# Auto hide dock
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
+
+# Move dock to bottom
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
+
+# Don't take full width
 dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
 
 pblue "Adding favorite apps..."
 dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'slack.desktop', 'google-chrome.desktop', 'code.desktop']"
-# gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'slack.desktop', 'google-chrome.desktop', 'code.desktop']"
 
 pblue "Adding keyboard shortcuts"
+
+# Open tmp directory when pressing <super> + e
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Super>e'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'xdg-open /tmp'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Open /tmp dir'"
-
-
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name 'Save screenshot of an area to /tmp'
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command 'gnome-screenshot -a'
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding '<Shift>Print'
-
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ name 'Save screenshot of a window to /tmp'
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ command 'gnome-screenshot -w'
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/ binding '<Alt>Print'
-
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ name 'Save screenshot to /tmp'
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ command 'gnome-screenshot'
-# gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ binding 'Print'
 
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 
