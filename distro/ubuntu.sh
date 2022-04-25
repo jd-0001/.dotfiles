@@ -16,6 +16,9 @@ echo "file:///home/jd/Projects/clevision clevision" >> ~/.config/gtk-3.0/bookmar
 pblue "Enabling always show hidden files..."
 dconf write /org/gtk/settings/file-chooser/show-hidden true
 
+dconf write /org/gnome/desktop/interface/clock-show-weekday true
+dconf write /org/gnome/desktop/wm/preferences/focus-mode "'sloppy'"
+
 pblue "Configuring dock settings..."
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
 dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
@@ -29,6 +32,7 @@ pblue "Adding keyboard shortcuts"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Super>e'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'xdg-open /tmp'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Open /tmp dir'"
+
 
 # gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name 'Save screenshot of an area to /tmp'
 # gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command 'gnome-screenshot -a'
