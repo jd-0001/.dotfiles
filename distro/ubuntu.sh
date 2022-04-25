@@ -55,5 +55,7 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cus
 
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
 
+dconf write /org/gnome/shell/extensions/ding/show-home false
+
 pgreen "Gnome configured :)"
 echo -e "\n\n"
