@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=gnome-terminal --tab -- /bin/bash -c ~/Rachana/scripts/attendance
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_IN]=Fill attendance
+Name=Fill attendance
+Comment[en_IN]=Prompt for filling clevision attendance sheet
+Comment=Prompt for filling clevision attendance sheet

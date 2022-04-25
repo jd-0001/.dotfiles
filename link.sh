@@ -11,6 +11,9 @@ sudo ln -s $(realpath $LINKS_DIR)/.xonshrc ~
 sudo ln -s $(realpath $LINKS_DIR)/.gitconfig ~
 sudo ln -s $(realpath $LINKS_DIR)/.vimrc ~
 
+# Fill attendance script
+sudo ln -s $(realpath $LINKS_DIR)/gnome-terminal.desktop ~/.config/autostart
+
 pgreen "Symlinks done"
 
 echo -e "\n\n"
