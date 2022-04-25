@@ -14,11 +14,12 @@ pblue "Installing slack..."
 sudo gdebi -n /tmp/slack*.deb >> "$LOG_DIR.dotfiles.log"
 pgreen "Slack installed\n"
 
+pblue "Login slack and set download location to /tmp for slack downloads"
+echo -e "Press any key once done\n"
 pblue "Opening slack in 3 seconds..."
 sleep 3
 slack > /dev/null 2>&1 &
 
-echo "Login slack and press any key"
 wait_for_keypress
 
 echo -e "\n\n"
