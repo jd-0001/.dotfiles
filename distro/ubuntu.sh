@@ -13,8 +13,11 @@ pblue "Setting bookmarks in nautilus"
 echo "file:///tmp tmp" >> ~/.config/gtk-3.0/bookmarks
 echo "file:///home/jd/Projects/clevision clevision" >> ~/.config/gtk-3.0/bookmarks
 
-pblue "Enabling always show hidden files..."
+pblue "Configuring nautilus..."
 dconf write /org/gtk/settings/file-chooser/show-hidden true
+dconf write /org/gnome/nautilus/list-view/default-zoom-level "'small'"
+dconf write /org/gnome/nautilus/preferences/default-folder-viewer "'list-view'"
+dconf write /org/gnome/nautilus/list-view/use-tree-view true
 
 dconf write /org/gnome/desktop/interface/clock-show-weekday true
 dconf write /org/gnome/desktop/wm/preferences/focus-mode "'sloppy'"
