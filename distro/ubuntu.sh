@@ -57,5 +57,9 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['
 
 dconf write /org/gnome/shell/extensions/ding/show-home false
 
+# Workspaces
+dconf write /org/gnome/mutter/workspaces-only-on-primary false
+dconf write /org/gnome/shell/extensions/dash-to-dock/isolate-workspaces true
+
 pgreen "Gnome configured :)"
 echo -e "\n\n"

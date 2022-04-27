@@ -2,10 +2,11 @@
 # Cheatsheet: https://github.com/anki-code/xonsh-cheatsheet
 # Bash to xonsh: https://xon.sh/bash_to_xsh.html
 
-# source-bash ~/.bashrc
-
-# Show traceback on error
 $XONSH_SHOW_TRACEBACK = True
+$XONSH_TRACEBACK_LOGFILE = "/tmp/xonsh-traceback.log"
+
+#source-bash ~/.bashrc
+$PATH.append('~/Rachana/scripts/')
 
 # # Source nvm
 # source-bash ~/.xonsh/nvm
@@ -51,6 +52,7 @@ _xontribs = [
     'default_command',
     'xlsd',
     'pyenv',
+    'pipeliner'
 ]
 if _xontribs:
     xontrib load @(_xontribs)
@@ -127,3 +129,48 @@ aliases['yui'] = "yarn upgrade-interactive --latest"
 
 # Node: Remove node_modules related files
 aliases['rmnode'] = 'rm -rf node_modules yarn.lock package-lock.json'
+
+# secret-tool
+def _set_pwd(args):
+    if len(args) != 2:
+        raise ValueError("it accepts 2 arguments")
+
+    label = args[0]
+    value = args[1]
+
+    secret-tool store --label=@(label) pwd @(value)
+
+aliases['set_pwd'] = _set_pwd
+
+def _set_token(args):
+    if len(args) != 2:
+        raise ValueError("it accepts 2 arguments")
+
+    label = args[0]
+    value = args[1]
+
+    secret-tool store --label=@(label) token @(value)
+
+aliases['set_pwd'] = _set_pwd
+
+def _pwd(args, stdin=None, stdout=None):
+    if len(args) != 1:
+        raise ValueError("it accepts only 1 argument")
+
+    import sys
+    value = args.pop()
+
+    secret-tool lookup pwd @(value)
+
+aliases['_pwd'] = _pwd
+
+def _token(args, stdin=None, stdout=None):
+    if len(args) != 1:
+        raise ValueError("it accepts only 1 argument")
+
+    import sys
+    value = args.pop()
+
+    secret-tool lookup token @(value)
+
+aliases['_token'] = _token

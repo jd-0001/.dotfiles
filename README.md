@@ -22,3 +22,4 @@ This will bootstrap my new system :)
 
 - https://askubuntu.com/questions/907425/how-do-i-back-up-and-restore-passwords-and-keys
 - https://askubuntu.com/questions/284957/vi-getting-multiple-sorry-the-command-is-not-available-in-this-version-af
+- https://askubuntu.com/questions/262698/how-do-i-get-passwords-from-the-keyring-in-the-terminal-for-usage-in-scripts
