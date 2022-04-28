@@ -97,7 +97,7 @@ aliases['http'] = 'python3 -m http.server'
 aliases['='] = 'xdg-open'
 
 # Activates poetry environnent without writing env dir path
-aliases['env-pa'] = 'source @$(poetry env info -p)/bin/activate'
+aliases['env-pa'] = 'source-bash @$(poetry env info -p)/bin/activate'
 
 # This is already in .bash_aliases
 # git: Beautify git log

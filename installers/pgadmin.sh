@@ -8,6 +8,9 @@ sudo mkdir /var/log/pgadmin
 sudo chown $USER /var/lib/pgadmin
 sudo chown $USER /var/log/pgadmin
 
+# Navigate to $HOME
+cd ~
+
 echo -e "Creating new virtual environment..."
 python3 -m venv pgadmin4
 source pgadmin4/bin/activate
