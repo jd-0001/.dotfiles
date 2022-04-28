@@ -3,6 +3,9 @@ source "$(dirname "$0")/../utils/vars.sh"
 
 infoh1 "pgadmin4"
 
+pblue "Installing required libraries..."
+sudo apt-get install libpq-dev -y >> "$LOG_DIR.dotfiles.log"
+
 sudo mkdir /var/lib/pgadmin
 sudo mkdir /var/log/pgadmin
 sudo chown $USER /var/lib/pgadmin
