@@ -48,4 +48,9 @@ pblue "checking installation by printing vue version..."
 vue --version
 pgreen "Setup complete"
 
+infoh1 "ni by antfu"
+
+pblue "Installing ni..."
+npm i -g @antfu/ni > /dev/null 2>&1
+
 echo -e "\n\n"
