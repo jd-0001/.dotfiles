@@ -174,3 +174,14 @@ def _token(args, stdin=None, stdout=None):
     secret-tool lookup token @(value)
 
 aliases['_token'] = _token
+
+# loads nvm
+$NVM_DIR = $HOME + '/.nvm'
+nvm_sh = p'$NVM_DIR/nvm.sh'
+nvm_bash_completion = p'$NVM_DIR/bash_completion'
+
+if nvm_sh.exists():
+    source-bash -n --suppress-skip-message @(nvm_sh) e>/dev/null
+
+if nvm_bash_completion.exists():
+    source-bash -n --suppress-skip-message @(nvm_bash_completion) e>/dev/null
