@@ -43,6 +43,9 @@ dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
 # Don't take full width
 dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
 
+# Enable dock on all displays
+dconf write /org/gnome/shell/extensions/dash-to-dock/multi-monitor true
+
 pblue "Adding favorite apps..."
 dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'slack.desktop', 'google-chrome.desktop', 'code.desktop']"
 
