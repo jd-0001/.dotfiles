@@ -128,7 +128,12 @@ aliases['service-status'] = 'sudo systemctl status'
 aliases['yui'] = "yarn upgrade-interactive --latest"
 
 # Node: Remove node_modules related files
-aliases['rmnode'] = 'rm -rf node_modules yarn.lock package-lock.json'
+aliases['rmnode'] = 'rm -rf node_modules yarn.lock package-lock.json pnpm-lock.yaml'
+
+aliases['bx'] = 'bash -c!'
+
+# TODO: Use bx alias (https://github.com/xonsh/xonsh/discussions/4808)
+aliases['kp'] = 'bash -c! sudo kill -9 $(sudo lsof -t -i:$arg0)'
 
 # secret-tool
 def _set_pwd(args):
